@@ -1,4 +1,5 @@
     /*--------------------------- Colors ! ---------------------------*/
+        /*----------------------- Main Colors ! ------------------*/
     $Blue_one: #E9F4FF;
     $Blue_two: #D3E9FF;
     $Blue_three: #BCDEFF;
@@ -14,9 +15,12 @@
     $Blue_thirteen: #1D3E60;
     $Blue_fourteen: #132A40;
     $Blue_fifteen: #0A1520;
+        /*----------------------- System colors ! ------------------*/
     $Success: #28A745;
     $Error: #D93025;
     $Attention: #FFC107;
+    $Hover_mouse: #70757A;
+    $Select_the_block: #1A73E8;
     
     @media screen and (max-width: 350px) {
         body {
