@@ -1,26 +1,39 @@
+    /*--------------------------- Fonts ! ---------------------------*/
+    @font-face{
+        src: url(./fonts/ArbFONTS-Al-Jazeera-Arabic-Bold.ttf);
+        font-family: Al-Jazeera-Bold;
+    }
+    @font-face{
+        src: url(./fonts/ArbFONTS-Al-Jazeera-Arabic-Light.ttf);
+        font-family: Al-Jazeera-Light;
+    }
+    @font-face{
+        src: url(./fonts/ArbFONTS-Al-Jazeera-Arabic-Regular.ttf);
+        font-family: Al-Jazeera-Regular;
+    }
     /*--------------------------- Colors ! ---------------------------*/
         /*----------------------- Main Colors ! ------------------*/
-    $Blue_one: #E9F4FF;
-    $Blue_two: #D3E9FF;
-    $Blue_three: #BCDEFF;
-    $Blue_four: #A6D3FF;
-    $Blue_five: #90C7FF;
-    $Blue_six: #7ABCFF;
-    $Blue_seven: #63B1FF;
-    $Blue_eight: #4DA6FF;
-    $Blue_nine: #4391DF;
-    $Blue_ten: #3A7DBF;
-    $Blue_eleven: #30689F;
-    $Blue_twelve: #275380;
-    $Blue_thirteen: #1D3E60;
-    $Blue_fourteen: #132A40;
-    $Blue_fifteen: #0A1520;
+        $Blue_one: #E9F4FF;
+        $Blue_two: #D3E9FF;
+        $Blue_three: #BCDEFF;
+        $Blue_four: #A6D3FF;
+        $Blue_five: #90C7FF;
+        $Blue_six: #7ABCFF;
+        $Blue_seven: #63B1FF;
+        $Blue_eight: #4DA6FF;
+        $Blue_nine: #4391DF;
+        $Blue_ten: #3A7DBF;
+        $Blue_eleven: #30689F;
+        $Blue_twelve: #275380;
+        $Blue_thirteen: #1D3E60;
+        $Blue_fourteen: #132A40;
+        $Blue_fifteen: #0A1520;
         /*----------------------- System colors ! ------------------*/
-    $Success: #28A745;
-    $Error: #D93025;
-    $Attention: #FFC107;
-    $Hover_mouse: #70757A;
-    $Select_the_block: #1A73E8;
+        $Success: #28A745;
+        $Error: #D93025;
+        $Attention: #FFC107;
+        $Hover_mouse: #70757A;
+        $Select_the_block: #1A73E8;
     
     @media screen and (max-width: 350px) {
         body {
