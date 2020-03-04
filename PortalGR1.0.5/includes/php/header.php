@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة العلاقات الحكومية</title>
-    <link rel="stylesheet" href="style/main.scss">
+    <link rel="stylesheet" href="style/main.css">
     <script src="https://kit.fontawesome.com/03da71d2d8.js"></script>
     <link rel="shortcut icon" type="image/png" href="images\favicon.ico" />
 </head>

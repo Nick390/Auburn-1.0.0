@@ -51,6 +51,9 @@
             margin: 10px;
         }
         /*--------------------------- Header code ! ---------------------------*/
+        header .mobile-header{
+            display: none;
+        }
         .headerlogo {
             display: none;
         }
@@ -60,7 +63,7 @@
         .headerlogologoname {
             display: none;
         }
-        .logo {
+        .logo{
             display: none;
         }
         .logoname {
@@ -69,8 +72,12 @@
         .sublogoname {
             display: none;
         }
+        header .home-header{
+            display: none;
+        }
+
         /*--------------------------- Nav code ! ---------------------------*/
-        nav ul {
+        nav .mobile-nav ul {
             display: none;
         }
         nav ul li {

@@ -1,4 +1,22 @@
+/*--------------------------- Fonts ! ---------------------------*/
+@font-face {
+  src: url(./fonts/ArbFONTS-Al-Jazeera-Arabic-Bold.ttf);
+  font-family: Al-Jazeera-Bold;
+}
+
+@font-face {
+  src: url(./fonts/ArbFONTS-Al-Jazeera-Arabic-Light.ttf);
+  font-family: Al-Jazeera-Light;
+}
+
+@font-face {
+  src: url(./fonts/ArbFONTS-Al-Jazeera-Arabic-Regular.ttf);
+  font-family: Al-Jazeera-Regular;
+}
+
 /*--------------------------- Colors ! ---------------------------*/
+/*----------------------- Main Colors ! ------------------*/
+/*----------------------- System colors ! ------------------*/
 @media screen and (max-width: 350px) {
   body {
     margin: 0px;
@@ -15,6 +33,9 @@
     margin: 10px;
   }
   /*--------------------------- Header code ! ---------------------------*/
+  header .mobile-header {
+    display: none;
+  }
   .headerlogo {
     display: none;
   }
@@ -33,8 +54,11 @@
   .sublogoname {
     display: none;
   }
+  header .home-header {
+    display: none;
+  }
   /*--------------------------- Nav code ! ---------------------------*/
-  nav ul {
+  nav .mobile-nav ul {
     display: none;
   }
   nav ul li {
@@ -199,30 +223,42 @@
   .headerlogo {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 10% 90%;
-        grid-template-columns: 10% 90%;
     background-color: #343838;
     padding: 14px;
-    font-size: 30px;
+    font-size: 24px;
     margin: 0px;
     color: white;
+    -ms-grid-columns: auto 1fr 1fr;
+        grid-template-columns: auto 1fr 1fr;
   }
   .headerlogologo {
-    float: right;
     color: #ffffff;
-    text-align: right;
-    padding-right: 0px;
     width: 60px;
     height: 60px;
   }
   .headerlogologoname {
-    font-size: 20px;
+    padding-top: 4px;
     color: #ffffff;
-    font-weight: bold;
-    text-align: right;
-    padding-right: 100px;
+    padding-right: 14px;
+  }
+  .headerlogologoname h1 {
+    display: inline;
+    font-size: 18px;
   }
   /*--------------------------- Nav code ! ---------------------------*/
+  .mobile-nav {
+    display: none;
+  }
+  .home-nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .home-nav {
+    padding-top: 14px;
+  }
   /*--------------------------- article code ! ---------------------------*/
+  article {
+    padding: 14px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
