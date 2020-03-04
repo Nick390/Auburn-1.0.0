@@ -32,6 +32,7 @@
             </div>
             <div class="home-nav">
                 <a href="index.php">الرئيسية</a>
+                <a href="./pages/All-branches.php">كافة الفروع</a>
             </div>
         </div>
     </header>
