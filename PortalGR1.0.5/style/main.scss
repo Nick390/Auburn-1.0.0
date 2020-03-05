@@ -148,12 +148,12 @@
             margin: 0px;
             margin-top: 3px;
             font-size: 30px;
-            color: #fff;
+            color: $Blue_one;
         }
         .sublogoname {
             padding: 0px;
             font-size: 20px;
-            color: #fff;
+            color: $Blue_one;
         }
         /*--------------------------- Nav code ! ---------------------------*/
         .home-nav {
@@ -172,7 +172,7 @@
         }
         nav ul li {
             text-decoration: none;
-            color: #fff;
+            color: $Blue_one;
             float: right;
             display: block;
             text-align: center;
@@ -184,7 +184,7 @@
         a {
             text-decoration: none;
             list-style: none;
-            color: #fff;
+            color: $Blue_one;
         }
         nav ul li ul {
             display: none;
@@ -201,7 +201,7 @@
         }
         nav ul li ul li:hover {
             background-color: #000;
-            color: #fff;
+            color: $Blue_one;
             text-align: center;
             padding-top: 15px;
             padding-bottom: 15px;
@@ -213,13 +213,13 @@
         }
         .welcomeIndexTextone {
             text-align: right;
-            color: #fff;
+            color: $Blue_one;
             font-size: 25px;
             margin-bottom: 0px;
         }
         .welcomeIndexTextTwo {
             text-align: right;
-            color: #fff;
+            color: $Blue_one;
             font-size: 18px;
             margin-top: 10px;
         }
@@ -241,21 +241,20 @@
         }
         .headerlogo {
             display: grid;
-            background-color: #343838;
+            background-color: $Blue_ten;
             padding: 14px;
             font-size: 24px;
             margin: 0px;
-            color: white;
+            color: $Blue_one;
             grid-template-columns: auto 1fr 1fr;
         }
         .headerlogologo {
-            color: #ffffff;
             width: 60px;
             height: 60px;
         }
         .headerlogologoname {
             padding-top: 4px;
-            color: #ffffff;
+            color: $Blue_one;
             padding-right: 14px;
         }
         .headerlogologoname h1 {
@@ -268,7 +267,7 @@
         }
         .home-nav a {
             text-decoration: none;
-            color: #fff;
+            color: $Blue_one;
         }
         .home-nav {
             padding-top: 14px;

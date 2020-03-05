@@ -33,6 +33,7 @@
             <div class="home-nav">
                 <a href="index.php">الرئيسية</a>
                 <a href="./pages/All-branches.php">كافة الفروع</a>
+                <a href="./pages/Validity-of-licenses.php">صلاحية الرخص</a>
             </div>
         </div>
     </header>
