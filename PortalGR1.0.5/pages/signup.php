@@ -1,0 +1,27 @@
+<?php
+
+require_once 'includes/source/dp_connect.php';
+
+if(isset($_POST['signup-btn'])){
+
+    $username = $_POST['user-name'];
+    $email = $_POST['user-email'];
+
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+try {
+    $SQLInsert = "INSERT INTO users (username, password, email, to_date)
+                VALUES (:username, :password, :email, now())";
+    $statement = $conn->prepare($SQLInsert);
+    $statement->execute(array(':username' => $username, ':password' => $hashed_password, ':email' => $email));
+
+    if($statement->rowCount() == 1) {
+        $result = header('locatin: index.html');
+    }
+}
+catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+}
+
+?>
