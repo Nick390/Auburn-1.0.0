@@ -1,6 +1,6 @@
 <?php
 
-require_once 'PortalGR1.0.5\includes\source\session.php';
+require_once '../includes/source/ession.php';
 
 session_destroy();
 header('location: index.html');

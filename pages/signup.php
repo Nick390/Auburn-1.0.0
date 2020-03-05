@@ -1,6 +1,6 @@
 <?php
 
-require_once 'PortalGR1.0.5\includes\source\dp_connect.php';
+require_once '../includes/source/dp_connect.php';
 
 if(isset($_POST['signup-btn'])) {
 

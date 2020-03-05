@@ -1,6 +1,6 @@
 <?php
 
-include_once '/includes/source/session.php';
+include_once '../includes/source/session.php';
 
 ?>
 <!DOCTYPE html>

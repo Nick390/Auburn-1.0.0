@@ -1,7 +1,7 @@
 <?php
 
-require_once 'PortalGR1.0.5\includes\source\session.php';
-require_once 'PortalGR1.0.5\includes\source\dp_connect.php';
+require_once '../includes/source/session.php';
+require_once '../includes/source/dp_connect.php';
 
 if(isset($_POST['login-btn'])) {
 
