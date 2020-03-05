@@ -3,182 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login System</title>
-    <style>
-        * {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI';
-    font-size: 25px;
-}
-
-.form input {
-    min-width: 400px;
-    display: block;
-    margin: 20px;
-    padding: 15px 20px;
-    background-color: #ece7e7;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    box-shadow: 15px 15px 25px #a8a8a8;
-    transition: box-shadow 0.5s;
-}
-
-.form input:focus {
-    box-shadow: 5px 5px 15px #a8a8a8;
-}
-
-.form .btn {
-    margin: auto;
-    padding: 10px 35px;
-    background-color: #f1a566;
-    color: #fff;
-    border: none;
-    font-size: 22px;
-    border-radius: 10px;
-    box-shadow: 15px 15px 20px #a8a8a8;
-    transition: box-shadow 0.5s;
-    outline: none;
-}
-
-.form .btn:hover {
-    box-shadow: 5px 5px 15px #aaa;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh;
-    width: 50vw;
-    position: absolute;
-    bottom: 0px;
-    font-size: 35px;
-}
-
-.left-section .form {
-    float: left;
-    margin: 35vh auto;
-}
-
-.right-section .form {
-    float: right;
-    margin: 30vh auto;
-    right: 0;
-}
-
-.cover .switch-btn {
-    position: absolute;
-    bottom: 0;
-    font-size: 25px;
-    margin: 40vh auto;
-    padding: 10px 55px;
-    background-color: #f1a566;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 15px 15px 25px #a8a8a8;
-    transition: box-shadow 0.5s;
-    outline: none;
-}
-
-.cover .switch-btn:hover {
-    box-shadow: 5px 5px 15px #aaa;
-}
-
-.left-section .cover {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.left-section .cover img {
-    height: 100vh;
-    width: 50vw;
-}
-
-.left-section .cover h1 {
-    position: absolute;
-    bottom: 0;
-    margin: 60vh auto;
-    color: #fff;
-    font-size: 50px;
-}
-
-.left-section .cover h3 {
-    position: absolute;
-    bottom: 0;
-    margin: 50vh auto;
-    color: #fff;
-    font-size: 35px;
-}
-
-.left-section .cover-hide {
-    visibility: hidden;
-}
-
-.left-section .form-hide {
-    visibility: hidden;
-}
-
-.right-section .cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.right-section .cover img {
-    height: 100vh;
-    width: 50vw;
-}
-
-.right-section .cover h1 {
-    position: absolute;
-    bottom: 0;
-    margin: 60vh auto;
-    font-size: 50px;
-    color: #fff;
-}
-
-.right-section .cover h3 {
-    position: absolute;
-    bottom: 0;
-    margin: 50vh auto;
-    color: #fff;
-    font-size: 35px;
-}
-
-.right-section .cover-hide {
-    visibility: hidden;
-}
-
-.right-section .form-hide {
-    visibility: hidden;
-}
-
-.fade-in-element {
-    animation-name: fade-in-element;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fade-in-element {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-</style>
+    <link rel="stylesheet" href="PortalGR1.0.5/style/login.css">
 </head>
 <body>
     
@@ -191,10 +16,10 @@ body {
         </div>
         <div id="left-form" class="form fade-in-element">
             <h1>Login</h1>
-            <form action="" method="post">
+            <form action="login.php" method="post">
                 <input type="text" name="user-name" class="input-box" placeholder="User Name">
                 <input type="password" name="user-pass" class="input-box" placeholder="Password">
-                <input type="button" name="login-btn" class="btn" value="Login">
+                <input type="submit" name="login-btn" class="btn" value="Login">
             </form>
         </div>
     </section>
@@ -208,33 +33,16 @@ body {
         </div>
         <div id="right-form" class="form form-hide">
             <h1>Signup</h1>
-            <form action="" method="post">
+            <form action="signup.php" method="post">
                 <input type="text" name="user-name" class="input-box" placeholder="User Name">
                 <input type="email" name="user-email" class="input-box" placeholder="Email">
                 <input type="password" name="user-pass" class="input-box" placeholder="Password">
-                <input type="button" name="signup-btn" class="btn" value="Signup">
+                <input type="submit" name="signup-btn" class="btn" value="Signup">
             </form>
         </div>
     </section>
 
-    <script>
-        
-var left_cover = document.getElementById("left-cover");
-var left_form = document.getElementById("left-form");
-
-var right_cover = document.getElementById("right-cover");
-var right_form = document.getElementById("right-form");
-
-function switchSignup() {
-    right_form.classList.add("fade-in-element");
-    left_cover.classList.add("fade-in-element");
-
-    left_form.classList.add("form-hide");
-    left_cover.classList.remove("cover-hide");
-    right_form.classList.remove("form-hide");
-    right_cover.classList.add("cover-hide");
-}
-    </script>
+    <script src="PortalGR1.0.5/scripts/login.js"></script>
 
 </body>
 </html>
