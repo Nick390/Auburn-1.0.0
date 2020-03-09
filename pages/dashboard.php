@@ -11,7 +11,7 @@ include_once '../includes/source/session.php';
     <title>لوحة التحكم</title>
 </head>
 <body>
-    <?php if(!isset($_SESSION['username'])): header("location: ./pages/logout.php");?>
+    <?php if(!isset($_SESSION['username'])): header("location: logout.php");?>
 
     <?php else: ?>
     
