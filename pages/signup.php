@@ -7,6 +7,11 @@ if(isset($_POST['signup-btn'])) {
       $username = $_POST['user-name'];
       $email = $_POST['user-email'];
       $password = $_POST['user-pass'];
+      //new code start
+      $email_query = "SELECT * FROM users WHERE email='$email' ";
+      $email_query_run = mysqul_query($conn, $email_query);
+      if(mysqli_num_rows($email_query_run) > 0){}else{}$_SESSION['status'] = "البريد مسجل لدى مستخدم سابقاً الرجاء تسجيل الدخول";
+      //new code end
 
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
