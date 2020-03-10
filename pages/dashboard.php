@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 include_once '../includes/source/session.php';
 
@@ -17,7 +17,7 @@ include_once '../includes/source/session.php';
     
     <?php endif ?>
     
-    <?php echo "<h1> welcome".$_SESSION['username']." To Dashboard </h1>" ?>
+    <?php echo "<h1> welcome <h1 style='color: red;'>".$_SESSION['username']."</h1> To Dashboard </h1>" ?>
 
     <h2><a href="logout.php">تسجيل الخروج</a></h2>
 </body>
