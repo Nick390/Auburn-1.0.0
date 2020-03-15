@@ -1,16 +1,31 @@
-<!--You can add more pages through this page-->
-<nav class="mobile-nav">
-    <ul>
-        <li><a href="index.php"><i class="fas fa-home"></i></br>الرئيسية</a></li>
-        <li><a href="https://forms.gle/hQxVxdhZArbFqshd6"><i class="fas fa-folder-plus"></i></br>تحديث الملفات</a></li>
-        <li><a href="All branches.php"><i class="fas fa-store-alt"></i></br>كافة الفروع</a></li>
-        <li><a href=""><i class="fas fa-ellipsis-h"></i></br>المزيد</a>
-            <ul>
-                <li><a href="https://cutt.us/Notice"><i class="fas fa-flag"></i></br>البلاغات</a></li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1I008hGuYYxUvXudvhSeEizcHvnxTEGJyfs11SrD-BAI/edit?usp=sharing"><i class="fas fa-clock"></i></br>الرخص</a></li>
-                <li><a href="Versions.php"><i class="fas fa-code-branch"></i></br>الإصدارات</a></li>
-                <li><a href="https://forms.gle/8z1Ktxq6jVUNkdUw6"><i class="fas fa-star"></i></br>قيمنا</a></li>
-            </ul>
-        </li>
+<?php if(!isset($_SESSION['username'])): header("location: logout.php");?>
+
+      <?php else: ?>
+
+      <?php endif ?>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="dashboard.php">بوابة العلاقات الحكومية</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav margin-right">
+      <li class="nav-item"><?php echo "<a class='nav-link'> مرحباً بك ".$_SESSION['username']." في لوحة التحكم </a>" ?></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          كافة الملفات
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/pages/All-branches.php">الفروع</a>
+          <a class="dropdown-item" href="#">السجلات التجارية</a>
+          <a class="dropdown-item" href="/pages/Validity-of-licenses.php">صلاحية الرخص</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/profile.php">الملف الشخصي</a>
+      </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0" action="logout.php">
+      <button class="btn btn-outline-danger my-2 my-sm-0">تسجيل الخروج</button>
+    </form>
+  </div>
 </nav>

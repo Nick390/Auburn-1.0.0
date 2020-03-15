@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة العلاقات الحكومية</title>
+    <link rel="stylesheet" href="style/bootstrap-grid.css">
+    <link rel="stylesheet" href="style/bootstrap-reboot.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/main.css">
     <script src="https://kit.fontawesome.com/03da71d2d8.js"></script>
     <link rel="shortcut icon" type="image/png" href="images\favicon.ico" />
 </head>
-
 <body>
     <!--Warning It is added to all pages on the site-->
     <h1 class="alertText"><i class="fas fa-exclamation-triangle"></i>
@@ -37,3 +38,4 @@
             </div>
         </div>
     </header>
+    

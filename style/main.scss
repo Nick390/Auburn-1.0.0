@@ -34,6 +34,11 @@
         $Attention: #FFC107;
         $Hover_mouse: #70757A;
         $Select_the_block: #1A73E8;
+        *{
+            direction: rtl;
+            margin: 0px;
+            padding: 0px;
+        }
     
     @media screen and (max-width: 350px) {
         body {

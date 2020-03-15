@@ -7,6 +7,7 @@ if(isset($_POST['signup-btn'])) {
       $username = $_POST['user-name'];
       $email = $_POST['user-email'];
       $password = $_POST['user-pass'];
+
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     try {
@@ -25,4 +26,5 @@ if(isset($_POST['signup-btn'])) {
     }
 
 }
+
 ?>

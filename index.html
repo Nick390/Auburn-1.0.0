@@ -1,48 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login System</title>
-    <link rel="stylesheet" href="style/login.css">
-</head>
-<body>
-    
-    <section class="left-section">
-        <div id="left-cover" class="cover cover-hide">
-            <img src="images/cover.pn" alt="">
-            <h1>Welcome !</h1>
-            <h3>Already have an account ?</h3>
-            <button type="button" class="switch-btn" onclick="location.reload()">Login</button>
-        </div>
-        <div id="left-form" class="form fade-in-element">
-            <h1>Login</h1>
-            <form action="pages/login.php" method="post">
-                <input type="text" name="user-name" class="input-box" placeholder="User Name">
-                <input type="password" name="user-pass" class="input-box" placeholder="Password">
-                <input type="submit" name="login-btn" class="btn" value="Login">
-            </form>
-        </div>
-    </section>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>تسجيل الدخول - بوابة العلاقات الحكومية</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+    <style>
+  html,
+body {
+  height: 100%;
+  direction: rtl;
+}
 
-    <section class="right-section">
-        <div id="right-cover" class="cover fade-in-element">
-            <img src="images/cover.png" alt="">
-            <h1>Welcome !</h1>
-            <h3>Don't have an account ?</h3>
-            <button type="button" class="switch-btn" onclick="switchSignup()">Signup</button>
-        </div>
-        <div id="right-form" class="form form-hide">
-            <h1>Signup</h1>
-            <form action="pages/signup.php" method="post">
-                <input type="text" name="user-name" class="input-box" placeholder="User Name">
-                <input type="email" name="user-email" class="input-box" placeholder="Email">
-                <input type="password" name="user-pass" class="input-box" placeholder="Password">
-                <input type="submit" name="signup-btn" class="btn" value="Signup">
-            </form>
-        </div>
-    </section>
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
 
-    <script src="scripts/login.js"></script>
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 
+    </style>
+  </head>
+  <body class="text-center">
+    <form class="form-signin" action="pages/login.php" method="post">
+        <img class="mb-4" src="/images/logo.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">الرجاء تسجيل الدخول</h1>
+        <label for="inputEmail" class="sr-only">إسم المستخدم</label>
+        <input type="text" name="user-name" id="inputEmail" class="form-control" placeholder="إسم المستخدم" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">كلمة المرور</label>
+        <input type="password" name="user-pass" id="inputPassword" class="form-control" placeholder="كلمة المرور" required="">
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me">
+            تذكرني
+        </label>
+        </div>
+        <label>ليس لديك <a href="signup.html">إنشاء حساب</a></label>
+        <button type="submit" name="login-btn" class="btn btn-lg btn-primary btn-block">تسجيل الدخول</button>
+        <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+    </form>
 </body>
 </html>

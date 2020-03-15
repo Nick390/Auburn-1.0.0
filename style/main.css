@@ -17,6 +17,12 @@
 /*--------------------------- Colors ! ---------------------------*/
 /*----------------------- Main Colors ! ------------------*/
 /*----------------------- System colors ! ------------------*/
+* {
+  direction: rtl;
+  margin: 0px;
+  padding: 0px;
+}
+
 @media screen and (max-width: 350px) {
   body {
     margin: 0px;
