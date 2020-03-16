@@ -61,12 +61,20 @@ $ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 $ sudo mysql -u root
 > CREATE DATABASE mydb;  
 > GRANT ALL ON mydb.* TO 'root' IDENTIFIED BY 'root';
-> INSERT INTO `users` (`id`, `username`, `password`, `email`, `to_date`) VALUES (NULL, 'root', 'root', '', '');
+> use mydb;
+> CREATE TABLE `users` (
+ `id` int(6) NOT NULL AUTO_INCREMENT,
+ `username` varchar(50) NOT NULL,
+ `password` varchar(100) NOT NULL,
+ `email` varchar(225) NOT NULL,
+ `to_date` datetime NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 > quit  
 $ mysql_secure_installation
 ```
 5. Install PortalGR1.0.5
-Go to the main directory It is usually `/var/www/html/` and do this command  
+Go to the main directory It is usually `cd /var/www/html/` and do this command  
 ```
 $ git clone https://github.com/Nick390/PortalGR1.0.5.git
 ```
