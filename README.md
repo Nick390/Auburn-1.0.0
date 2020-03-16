@@ -71,19 +71,25 @@ $ sudo mysql -u root
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 > quit  
-$ mysql_secure_installation
+$ mysql_secure_installation (You must switch to root $ sudo su )
 ```
 5. Install PortalGR1.0.5
 Go to the main directory It is usually `cd /var/www/html/` and do this command  
 ```
-$ sudo wget https://download1506.mediafire.com/4y2s01jooqmg/2q96ll6b2ye9pop/PortalGR1.0.5-master.tar.gz
-$ sudo tar -xzvf PortalGR1.0.5-master.tar.gz
+$ sudo wget https://download1506.mediafire.com/4y2s01jooqmg/2q96ll6b2ye9pop/PortalGR1.0.5-master.tar.gz (The link may not work some times)
+$ sudo tar -xzvf PortalGR1.0.5-master.tar.gz (You must switch to root $ sudo su ) (It may not work some times)
 ```
 6. Troubleshooting
 One important addition to setting up PortalGR1.0.5. Permission errors with the PortalGR1.0.5 installation can be fixed with the following command
 ```
-$ chown -R www-data:www-data /var/www/html/*
+$ chown -R www-data:www-data /var/www/html/* (You have to set a DNS) (Some files may be you me need to deleted because they are useless like PortalGR1.0.5-master.tar & PortalGR1.0.5-master) (If there is a file index.html you need to delete
+so it's not going to stop the process)
 ```
+To delete a directory do `rm directory_name/ -r`.
+To delete a PortalGR1.0.5-master.tar do `rm PortalGR1.0.5-master.tar`.
+To delete a PortalGR1.0.5-master do `rm PortalGR1.0.5-master -r`.
+Remember, you should always move all files to the main directory.
+To move all file to main directory do `mv * directory_path/`.
 ###### Good Luck
 
 ###### The system was built by Alwaleed Alwabel.
