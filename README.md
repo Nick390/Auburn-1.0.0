@@ -58,6 +58,7 @@ $ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 ```
 4. Prep Database and PHP
 ```
+$ sudo mysql -u root
 > CREATE DATABASE mydb;  
 > GRANT ALL ON mydb.* TO 'root' IDENTIFIED BY 'root';
 > INSERT INTO `users` (`id`, `username`, `password`, `email`, `to_date`) VALUES (NULL, 'root', 'root', '', '');
