@@ -76,8 +76,8 @@ $ mysql_secure_installation
 5. Install PortalGR1.0.5
 Go to the main directory It is usually `cd /var/www/html/` and do this command  
 ```
-$ wget https://download1506.mediafire.com/4y2s01jooqmg/2q96ll6b2ye9pop/PortalGR1.0.5-master.tar.gz
-$ tar -xzvf PortalGR1.0.5-master.tar.gz
+$ sudo wget https://download1506.mediafire.com/4y2s01jooqmg/2q96ll6b2ye9pop/PortalGR1.0.5-master.tar.gz
+$ sudo tar -xzvf PortalGR1.0.5-master.tar.gz
 ```
 6. Troubleshooting
 One important addition to setting up PortalGR1.0.5. Permission errors with the PortalGR1.0.5 installation can be fixed with the following command
