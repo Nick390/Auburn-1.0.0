@@ -46,7 +46,7 @@ body {
     </style>
   </head>
   <body class="text-center">
-    <form class="form-signin" action="pages/login.php" method="post">
+    <form class="form-signin" action="../includes/php/forgot-your-password.inc.php" method="post">
         <img class="mb-4" src="/images/logo.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">هل نسيت كلمة المرور ؟</h1>
         <p> من فضلك ادخل البريد الإلكتروني الخاص بحسابك و سوف نرسل لك رابط لتغيير كلمة المرور</p>
@@ -55,8 +55,18 @@ body {
         <div class="checkbox mb-2">
         <label>إرجع إلي <a href="/index.html">صفحة تسجيل الدخول</a></label>
 </div>
-        <button type="submit" name="login-btn" class="btn btn-lg btn-primary btn-block">اطلب كلمة مرور جديدة</button>
+        <button type="submit" name="reset-request-submit" class="btn btn-lg btn-primary btn-block">اطلب كلمة مرور جديدة</button>
         <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
     </form>
+    <?php 
+    //عندما ينجح إرسال النموذج في الأعلى إلى صفحة 
+    // forgot-your-password.inc.php 
+    // يظهر النموذج مربع نجحت عملية إرسال الملف
+    if(isset($_GET['reset'])){
+      if ($_GET["reset"] == "success") {
+        echo '<div class="alert alert-success" role="alert">راجع البريد الإكتروني !</div>';
+      }
+    }
+    ?>
 </body>
 </html>
