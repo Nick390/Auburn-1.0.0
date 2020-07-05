@@ -1,7 +1,12 @@
 <?php include('../includes/php/pages-header.php'); ?>
 <?php include('../includes/php/pages-nav.php'); ?>
-<br>
-<br>
+<!--Breadcrumb to see where are you at-->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">الرئيسية</li>
+  </ol>
+</nav>
+<!--نموذج يجب إزالتة بعد ربط قاعدة البيانات حيث ان قاعدة البيانات يجب ان تتوفر على هذه البيانات-->
 <div class="container">
   <div class="row">
     <div class="col">

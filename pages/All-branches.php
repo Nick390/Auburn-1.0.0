@@ -1,5 +1,13 @@
 <?php include('../includes/php/pages-header.php'); ?>
 <?php include('../includes/php/pages-nav.php'); ?>
+<!--Breadcrumb to nav back-->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
+    <li class="breadcrumb-item active">كافة الفروع</li>
+    <li class="breadcrumb-item active">الفروع</li>
+  </ol>
+</nav>
 <!--Add the text that you would like to appear on this page-->
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>تنبية!</strong> كل الكلمات التي تكتبها في البحث يتم تسجيلها لتطوير.
@@ -32,6 +40,7 @@
                     </div>
 </div>
 <br/>
+<!--نموذج يجب إزالتة بعد ربط قاعدة البيانات حيث ان قاعدة البيانات يجب ان تتوفر على هذه البيانات-->
 <nav class="navbar navbar-dark bg-dark">
     <a href="add-a-new-branch.php"><button class="btn btn-sm btn-primary">إضافة فرع جديد</button></a>
 </nav>
