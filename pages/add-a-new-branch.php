@@ -38,6 +38,15 @@ if(isset($_POST['signup-btn'])) {
     <li class="breadcrumb-item active" aria-current="page">إضافة فرع</li>
   </ol>
 </nav>
+<div class="container">
+    <h4>إضافة فرع جديد</h4>
+    <hr>
+    <div class="alert alert-warning" role="alert">
+    <strong>تنبية! </strong>
+    بإضافة فرع جديد يجب أن تتأكد انه غير موجود في النظام حيث أن إضافة فرع موجود سيسبب تداخل الملفات
+    </div>
+    </div>
+    
 <!--A form to add a new branch-->
 <form class="was-validated">
     <div class="container">
