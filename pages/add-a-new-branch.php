@@ -51,7 +51,7 @@ if(isset($_POST['submit'])) {
 <form class="needs-validation" autocomplete="off" novalidate>
     <div class="container">
         <div class="form-group">
-            <label>الإسم</label>
+            <label>الرقم الوظيفي</label>
             <input type="text" class="form-control" id="JobNumber" placeholder="مثل، 12345" value="" required />
             <div class="invalid-feedback">
       ادخل رقمك الوظيفي باللغة الإنجليزيه

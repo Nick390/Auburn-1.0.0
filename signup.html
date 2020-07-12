@@ -58,6 +58,41 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  color: #000;
+  position: relative;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#message p {
+  font-size: 14px;
+  text-align: right;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  right: -5px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  right: -5px;
+  content: "✖";
+}
 
     </style>
   </head>
@@ -73,12 +108,90 @@ body {
         <label for="inputEmail" class="sr-only">البريد الالكتروني</label>
         <input type="email" name="user-email" id="inputEmail" class="form-control" placeholder="البريد الالكتروني" required="" autofocus="">
         <label for="inputPassword" class="sr-only">كلمة المرور</label>
-        <input type="password" name="user-pass" id="inputPassword" class="form-control" placeholder="كلمة المرور" required="">
+        <input type="password" name="user-pass" id="inputPassword" class="form-control" placeholder="كلمة المرور" required="" pattern="(?=.*\d)(?=.*[a-z]" title="يجب أن يحتوي على رقم واحد على الأقل وحرف واحد كبير وحرف صغير ، وعلى الأقل 8 أحرف أو أكثر">
+        <!-- An element to toggle between password visibility -->
+        <input type="checkbox" onclick="myFunction()"> أظهر كلمة المرور
+        <div id="message">
+          <label>يجب أن تحتوي كلمة المرور على ما يلي:</label>
+          <p id="letter" class="invalid">A أحرف صغيرة</p>
+          <p id="capital" class="invalid">A أحرف كبيره</p>
+          <p id="number" class="invalid">A ارقام</p>
+          <p id="length" class="invalid">لا تقل عن 8 خانات</p>
+        </div>
         <label>لديك حساب بالفعل؟
       <a href="index.html">سجل دخولك الان</a></br>
     </label>
         <button type="submit" name="signup-btn" class="btn btn-lg btn-primary btn-block">تسجيل</button>
         <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
     </form>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("inputPassword");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+      </script>
+    <script>
+      var myInput = document.getElementById("inputPassword");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+      
+      // When the user clicks on the password field, show the message box
+      myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+      }
+      
+      // When the user clicks outside of the password field, hide the message box
+      myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+      }
+      
+      // When the user starts to type something inside the password field
+      myInput.onkeyup = function() {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.value.match(lowerCaseLetters)) {  
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+        }
+        
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if(myInput.value.match(upperCaseLetters)) {  
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+      
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if(myInput.value.match(numbers)) {  
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+        
+        // Validate length
+        if(myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+      }
+      </script>
 </body>
 </html>
