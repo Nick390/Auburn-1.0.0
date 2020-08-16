@@ -1,178 +1,45 @@
-* {
-    box-sizing: border-box;
-    direction: rtl;
+html,
+body {
+height: 100%;
+direction: rtl;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI';
-    font-size: 25px;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-align: center;
+align-items: center;
+padding-top: 40px;
+padding-bottom: 40px;
+background-color: #f5f5f5;
 }
 
-
-.form input {
-    min-width: 400px;
-    display: block;
-    margin: 20px;
-    padding: 15px 20px;
-    background-color: #ece7e7;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    font-size: 22px;
-    box-shadow: 15px 15px 25px #a8a8a8;
-    transition: box-shadow 0.5s;
+.form-signin {
+width: 100%;
+max-width: 330px;
+padding: 15px;
+margin: auto;
 }
-
-.form input:focus {
-    box-shadow: 5px 5px 15px #a8a8a8;
+.form-signin .checkbox {
+font-weight: 400;
 }
-
-.form .btn {
-    margin: auto;
-    padding: 10px 35px;
-    background-color: #f1a566;
-    color: #fff;
-    border: none;
-    font-size: 22px;
-    border-radius: 10px;
-    box-shadow: 15px 15px 25px #a8a8a8;
-    transition: box-shadow 0.5s;
-    outline: none;
+.form-signin .form-control {
+position: relative;
+box-sizing: border-box;
+height: auto;
+padding: 10px;
+font-size: 16px;
 }
-
-.form .btn:hover {
-    box-shadow: 5px 5px 15px #aaa;
+.form-signin .form-control:focus {
+z-index: 2;
 }
-
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh;
-    width: 50vw;
-    position: absolute;
-    bottom: 0px;
-    font-size: 35px;
+.form-signin input[type="text"] {
+margin-bottom: -1px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
 }
-
-.left-section .form {
-    float: left;
-    margin: 35vh auto;
-}
-
-.right-section .form {
-    float: right;
-    right: 0;
-    margin: 30vh auto;
-}
-
-.cover .switch-btn {
-    position: absolute;
-    bottom: 0;
-    font-size: 25px;
-    margin: 40vh auto;
-    padding: 10px 55px;
-    background-color: #f1a566;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 15px 15px 25px #a8a8a8;
-    transition: box-shadow 0.5s;
-    outline: none;
-}
-
-.cover .switch-btn:hover {
-    box-shadow: 5px 5px 15px #aaa;
-}
-
-.left-section .cover {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.left-section .cover img {
-    height: 100vh;
-    width: 50vw;
-}
-
-.left-section .cover h1 {
-    position: absolute;
-    bottom: 0px;
-    margin: 60vh auto;
-    color: #fff;
-    font-size: 50px;
-}
-
-.left-section .cover h3 {
-    position: absolute;
-    bottom: 0px;
-    margin: 50vh auto;
-    color: #fff;
-    font-size: 35px;
-}
-
-.left-section .cover-hide {
-    visibility: hidden;
-}
-
-.left-section .form-hide {
-    visibility: hidden;
-}
-
-.right-section .cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.right-section .cover img {
-    height: 100vh;
-    width: 50vw;
-}
-
-.right-section .cover h1 {
-    position: absolute;
-    bottom: 0px;
-    margin: 60vh auto;
-    color: #fff;
-    font-size: 50px;
-}
-
-.right-section .cover h3 {
-    position: absolute;
-    bottom: 0px;
-    margin: 50vh auto;
-    color: #fff;
-    font-size: 35px;
-}
-
-.right-section .cover-hide {
-    visibility: hidden;
-}
-
-.right-section .form-hide {
-    visibility: hidden;
-}
-
-.fade-in-element {
-    animation-name: fade-in-element;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fade-in-element {
-    from {
-        opacity: 0;
-    }
-  
-    to {
-        opacity: 1;
-    }
+.form-signin input[type="password"] {
+margin-bottom: 10px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
 }

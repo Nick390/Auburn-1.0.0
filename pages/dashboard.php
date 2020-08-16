@@ -1,5 +1,5 @@
-<?php include('../includes/php/pages-header.php'); ?>
-<?php include('../includes/php/pages-nav.php'); ?>
+<?php include("../includes/php/pages-header.php"); ?>
+<?php include("../includes/php/pages-nav.php"); ?>
 <!--Breadcrumb to see where are you at-->
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -78,4 +78,4 @@
     </div>
   </div>
 </div>
-    <?php include('../includes/php/pages-footer.php'); ?>
+    <?php include("../includes/php/pages-footer.php"); ?>

@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST["reset-password-submit"])) {
+/*if (isset($_POST["reset-password-submit"])) {
 
     $selector = $_POST["selector"];
     $validator = $_POST["validator"];
@@ -89,4 +89,5 @@ if (isset($_POST["reset-password-submit"])) {
     }
 } else {
     header("Location: /index.php");
-}
+}*/
+?>

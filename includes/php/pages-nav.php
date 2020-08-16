@@ -1,4 +1,4 @@
-<?php if(!isset($_SESSION['username'])): header("location: logout.php");?>
+<?php if(!isset($_SESSION['user_name'])): header("location: logout.php");?>
 
       <?php else: ?>
 
@@ -10,7 +10,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav margin-right">
-      <li class="nav-item"><?php echo "<a class='nav-link'> مرحباً بك ".$_SESSION['username']." في لوحة التحكم </a>" ?></li>
+      <li class="nav-item"><?php echo "<a class='nav-link'> مرحباً بك ".$_SESSION['user_name']." في لوحة التحكم </a>" ?></li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           كافة الملفات
@@ -24,8 +24,6 @@
         <a class="nav-link" href="/pages/profile.php">الملف الشخصي</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" action="logout.php">
-      <button class="btn btn-outline-danger my-2 my-sm-0">تسجيل الخروج</button>
-    </form>
+    <a href="/index.php?logout"><button class="btn btn-outline-danger my-2 my-sm-0">تسجيل الخروج</button><a/>
   </div>
 </nav>

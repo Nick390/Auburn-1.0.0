@@ -1,22 +1,25 @@
 <?php
 // ** MySQL settings - You can get this info from your web host ** //
+#MySQL hostname
+$DB_HOST ='localhost';
 #MySQL database username
 $DB_USER = 'root';
 #MySQL database password
-$DB_PASSWORD = '';
-#MySQL hostname AND The name of the database for PortalGR1.0.5
-$DB_HOST_DB_NAME = 'mysql:host=localhost; dbname=mydb';
-
-try {
+$DB_PASSWORD = '12345';
+#The name of the database
+$DB_NAME ='mydb';
+#MySQL database charset
+$DB_CHARSET = 'utf8';
 #Create connection
-  $conn = new PDO($DB_HOST_DB_NAME, $DB_USER, $DB_PASSWORD);
+$conn = mysqli_connect($DB_HOST,$DB_USER,$DB_PASSWORD,$DB_NAME);
+        mysqli_set_charset($conn,"$DB_CHARSET");
 #Check connection
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-} catch (PDOException $e) {
-
-  echo "Fail to connect to the database ".$e->getMessage();
-
+if(!$conn){
+  echo mysqli_connect_error("Error:").mysqli_connect_errno();
 }
-
+#close database after page lode
+function close_db(){
+  global $conn;
+  mysqli_close($conn);
+}
 ?>

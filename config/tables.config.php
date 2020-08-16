@@ -2,7 +2,8 @@
 #Connect to the database
 require_once '../includes/source/dp_connect.php';
 #Create a new Tables if not exist
-$DownloadHistory = "CREATE TABLE `downloadhistory` (
+$CREATEDATABASE = "CREATE DATABASE IF NOT EXISTS `login`;";
+$DownloadHistory = "CREATE TABLE `login`.`downloadhistory` (
     `id` int(6) NOT NULL AUTO_INCREMENT,
     `jobNumber` varchar(11) NOT NULL,
     `dateAndTime` datetime NOT NULL,
@@ -21,19 +22,20 @@ $Groups = "";
 $Versions = "";
 
 $CommercialRecords = "";
-
-$Users = "CREATE TABLE `users` (
-    `id` int(6) NOT NULL AUTO_INCREMENT,
-    `username` varchar(11) NOT NULL,
-    `password` varchar(50) NOT NULL,
-    `email` varchar(255) NOT NULL,
-    `to_date` datetime NOT NULL,
-    PRIMARY KEY (`id`)
-   ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4";
+$Users = "CREATE TABLE IF NOT EXISTS `login`.`users` (
+    `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
+    `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
+    `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
+    `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique',
+    PRIMARY KEY (`user_id`),
+    UNIQUE KEY `user_name` (`user_name`),
+    UNIQUE KEY `user_email` (`user_email`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';";
+  
 $ValidityOfLicenses = "";
 $BranchFilesAndUploadAndUpdate = "";
 
-if (mysqli_query($conn, $DownloadHistory, $LoginAndLogoutHistory, $RecordOldVersionsOfFiles, $UserDataUpdateLog, $Groups, $Versions, $CommercialRecords, $Users, $ValidityOfLicenses, $BranchFilesAndUploadAndUpdate)) {
+if (mysqli_query($conn, $CREATEDATABASE, $DownloadHistory, $Users)) {
     echo "All Tables created successfully";
 } else {
     echo "Error creating table: " . mysqli_error($conn);

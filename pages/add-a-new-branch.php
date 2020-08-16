@@ -2,7 +2,7 @@
 <?php include('../includes/php/pages-nav.php'); ?>
 <?php
 //نص الإتصال بقاعدة البيانات
-require_once '../includes/source/dp_connect.php';
+//require_once '../includes/source/dp_connect.php';
 //نص إرسال النموذج
 //النموذج الواقعي غير متصل مع النموذج الذي يرسل إلى قاعدة البيانات يحتاج إلى إصلاح
 if(isset($_POST['submit'])) {
@@ -12,21 +12,11 @@ if(isset($_POST['submit'])) {
       $Neighborhood = $_POST['Neighborhood'];
       $Region = $_POST['Region'];
 
-    try {
-      $SQLInsert = "INSERT INTO `add-a-new-branch` (`ID`, `JobNumber`, `BranchNumber`, `Neighborhood`, `Region`) VALUES (NULL, 'JobNumber', 'BranchNumber', 'Neighborhood', 'Region');";
+      //نص إضافة معلومات لقاعدة البيانات
 
-      $statement = $conn->prepare($SQLInsert);
-      $statement->execute(array(':JobNumber' => $JobNumber, ':BranchNumber' => $BranchNumber, ':Neighborhood' => $Neighborhood, ':Region' => $Region));
-
-      if($statement->rowCount() == 1) {
-        header('location: /index.html');
-      }
-    }
-    catch (PDOException $e) {
-      echo "Error: " . $e->getMessage();
-    }
-
-}
+      $result ="INSERT INTO `add_a_new_branch` (`ID`, `JobNumber`, `BranchNumber`, `Neighborhood`, `Region`) VALUES (NULL, '$JobNumber', '$BranchNumber', '$Neighborhood', '$Region');";
+      $run = mysqli_query($conn, $result);
+  }
 ?>
 <!--Breadcrumb to nav back-->
 <nav aria-label="breadcrumb">
@@ -48,37 +38,37 @@ if(isset($_POST['submit'])) {
     </div>
     
 <!--A form to add a new branch-->
-<form class="needs-validation" autocomplete="off" novalidate>
+<form class="needs-validation" autocomplete="off" novalidate method="post" action"">
     <div class="container">
         <div class="form-group">
             <label>الرقم الوظيفي</label>
-            <input type="text" class="form-control" id="JobNumber" placeholder="مثل، 12345" value="" required />
+            <input type="text" class="form-control" id="JobNumber" Name="JobNumber" placeholder="مثل، 12345" value="" required />
             <div class="invalid-feedback">
       ادخل رقمك الوظيفي باللغة الإنجليزيه
     </div>
         </div>
         <div class="form-group">
             <label>رقم الفرع</label>
-            <input type="text" class="form-control" id="BranchNumber" placeholder="مثل، 14، 22" value="" required />
+            <input type="text" class="form-control" id="BranchNumber" Name="BranchNumber" placeholder="مثل، 14، 22" value="" required />
             <div class="invalid-feedback">
       ادخل رقم الفرع بدون صفر في البداية
     </div>
         </div>
         <div class="form-group">
             <label>الحي</label>
-            <input type="text" class="form-control" id="Neighborhood" placeholder="مثل، الفتح، النصب" value="" required />
+            <input type="text" class="form-control" id="Neighborhood" Name="Neighborhood" placeholder="مثل، الفتح، النصب" value="" required />
             <div class="invalid-feedback">
       ادخل الحي بإسمه الصحيح إذا كان الإسم يحتوي على كسور او همزه قم بكتابة حالتين للفرع مثل النصب/ألنصب
     </div>
         </div>
         <div class="form-group">
             <label>المنطقة</label>
-            <input type="text" class="form-control" id="Region" placeholder="مثل، خميس مشيط،ابها" value="" required />
+            <input type="text" class="form-control" id="Region" Name="Region" placeholder="مثل، خميس مشيط،ابها" value="" required />
             <div class="invalid-feedback">
             ادخل المنطقة بإسمه الصحيح إذا كان الإسم يحتوي على كسور او همزه قم بكتابة حالتين للفرع مثل أبها/ابها </div>
         </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">إضافة الفرع</button>
+                <button type="submit" class="btn btn-primary" Name="submit">إضافة الفرع</button>
             </div>
     </div>
 </form>
@@ -106,8 +96,4 @@ if(isset($_POST['submit'])) {
       })();
     </script>
 
-<!--نص إضافة معلومات لقاعدة البيانات-->
-<INSERT INTO `licenses` (`id`, `sequence`, `branch`, `region`, `date-of-shop-license`,
-`date-of-civil-defense`, `permit`) VALUES (NULL, '1', '14', 'خميس مشيط', '2022-05-22', '2020-03-07',
-'2020-05-16');>
 <?php include('../includes/php/pages-footer.php'); ?>

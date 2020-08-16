@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<?php /*<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>نسيت كلمة المرور - بوابة العلاقات الحكومية</title>
@@ -72,10 +73,6 @@ body {
                  <button type="submit" name="reset-password-submit" class="btn btn-lg btn-primary btn-block">إعادة تعيين كلمة المرور</button>
                  <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
                  </form>
-                    <?php 
-                }
-            }
-      ?>
-
 </body>
-</html>
+</html>*/
+?>
