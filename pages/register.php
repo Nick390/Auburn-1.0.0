@@ -12,22 +12,24 @@
     <form method="post" action="register.php" name="registerform" class="form-signin">
         <img class="mb-4" src="/images/logo.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">تسجيل حساب جديد</h1>
+       
         <?php
 // show potential errors / feedback (from registration object)
 if (isset($registration)) {
     if ($registration->errors) {
         foreach ($registration->errors as $error) {
-        echo $error;
+        echo '<div class="alert alert-danger" role="alert">'.$error.'</div>';
 
         }
     }
     if ($registration->messages) {
         foreach ($registration->messages as $message) {
-            echo $message;
+            echo '<div class="alert alert-success" role="alert">'.$message.'</div>';
         }
     }
 }
 ?>
+
     <!-- the user name input field uses a HTML5 pattern check -->
     <label for="login_input_username" class="sr-only">إسم المستخدم</label>
     <input id="login_input_username" class="login_input form-control" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" placeholder="إسم المستخدم" autofocus="off" title="يجب أن يكون إسم المستخدم باللغة الإنجليزيه ويمكن ان يحتوي على رقم" required />

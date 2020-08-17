@@ -41,19 +41,19 @@ class Registration
         } elseif (empty($_POST['user_password_new']) || empty($_POST['user_password_repeat'])) {
             $this->errors[] = "Empty Password";
         } elseif ($_POST['user_password_new'] !== $_POST['user_password_repeat']) {
-            $this->errors[] = "Password and password repeat are not the same";
+            $this->errors[] = 'كلمة المرور وتأكيد كلمة المرور ليسا متطابقتين';
         } elseif (strlen($_POST['user_password_new']) < 6) {
-            $this->errors[] = "Password has a minimum length of 6 characters";
+            $this->errors[] = "كلمة المرور يجب ان لا تقل عن 6 أحرف";
         } elseif (strlen($_POST['user_name']) > 64 || strlen($_POST['user_name']) < 2) {
-            $this->errors[] = "Username cannot be shorter than 2 or longer than 64 characters";
+            $this->errors[] = "لا يمكن أن يكون اسم المستخدم أقصر من 2 أو أطول من 64 حرفًا";
         } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $_POST['user_name'])) {
-            $this->errors[] = "Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters";
+            $this->errors[] = "اسم المستخدم لا يتناسب مع نظام الأحرف المسموح بها يجب أن تكون بين A-Z كذلك يسمح بالأرقام من 2 إلى 64 حرفًا";
         } elseif (empty($_POST['user_email'])) {
-            $this->errors[] = "Email cannot be empty";
+            $this->errors[] = "لا يمكن أن يكون البريد الإلكتروني فارغًا";
         } elseif (strlen($_POST['user_email']) > 64) {
-            $this->errors[] = "Email cannot be longer than 64 characters";
+            $this->errors[] = "لا يمكن أن يزيد البريد الإلكتروني عن 64 حرفًا";
         } elseif (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
-            $this->errors[] = "Your email address is not in a valid email format";
+            $this->errors[] = "عنوان بريدك الإلكتروني ليس بتنسيق بريد إلكتروني الصحيح";
         } elseif (!empty($_POST['user_name'])
             && strlen($_POST['user_name']) <= 64
             && strlen($_POST['user_name']) >= 2
@@ -92,9 +92,7 @@ class Registration
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
-                    $this->errors[] = '<div class="alert alert-danger" role="alert">
-                    عذرًا ، اسم المستخدم / عنوان البريد الإلكتروني هذا مستخدم بالفعل.
-                  </div>';
+                    $this->errors[] = "  عذرًا ، اسم المستخدم / عنوان البريد الإلكتروني هذا مستخدم بالفعل.";
                 } else {
                     // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)
@@ -103,16 +101,16 @@ class Registration
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
-                        $this->messages[] = '<div class="alert alert-success" role="alert">تم إنشاء حسابك بنجاح. يمكنك الآن تسجيل الدخول.</div>';
+                        $this->messages[] = "تم إنشاء حسابك بنجاح. يمكنك الآن تسجيل الدخول.";
                     } else {
-                        $this->errors[] = '<div class="alert alert-danger" role="alert">عذرا ، فشل تسجيلك. الرجاء العودة والمحاولة مجددا.</div>';
+                        $this->errors[] = "عذرا ، فشل تسجيلك. الرجاء العودة والمحاولة مجددا.";
                     }
                 }
             } else {
-                $this->errors[] = '<div class="alert alert-danger" role="alert">عذرا ، لا يوجد اتصال بقاعدة البيانات.</div>';
+                $this->errors[] = "عذرا ، لا يوجد اتصال بقاعدة البيانات.";
             }
         } else {
-            $this->errors[] = '<div class="alert alert-danger" role="alert">حدث خطأ غير معروف.</div>';
+            $this->errors[] = "حدث خطأ غير معروف.";
         }
     }
 }
