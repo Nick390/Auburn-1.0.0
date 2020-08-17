@@ -50,6 +50,12 @@ $ sudo swapon /swapfile
 $ sudo nano /etc/fstab
 /swapfile swap swap defaults 0 0
 ```
+2.1 To make sure that there are no errors put the next command
+```
+sudo mount -a
+```
+>If no error appears, this indicates that your last modification does not contain errors
+
 3. Install LAMP Stack (Linux, Apache, MySQL, and PHP)
 ```
 $ sudo apt install tasksel
