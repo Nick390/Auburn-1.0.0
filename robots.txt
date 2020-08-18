@@ -1,0 +1,4 @@
+Disallow: /admin
+Disallow: /pages
+Allow: /
+Sitemap: http://localhost/sitemap.xml
