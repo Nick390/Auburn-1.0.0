@@ -1,19 +1,21 @@
 <?php include("../includes/php/pages-header.php"); ?>
 <?php include("../includes/php/pages-nav.php"); ?>
 <!--Breadcrumb to see where are you at-->
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">الرئيسية</li>
-  </ol>
-</nav>
+<br>
 <!--نموذج يجب إزالتة بعد ربط قاعدة البيانات حيث ان قاعدة البيانات يجب ان تتوفر على هذه البيانات-->
 <div class="container">
   <div class="row">
     <div class="col">
-    <table class="table table-dark">
-    جديد الرخص
+    <table class="table table-white">
+    <div class="row">
+    <div class="col">
+    قاربت على الإنتهاء
+    </div>
+    <div class="col text-left">
+    <a href="#"> <i class="fas fa-eye"> شاهد الكل</i> </a>
+    </div>
   <thead>
-    <tr>
+    <tr class="text-center">
       <th scope="col">#</th>
       <th scope="col">الفرع</th>
       <th scope="col">الدفاع المدني</th>
@@ -21,33 +23,38 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="text-center">
       <th scope="row">1</th>
-      <td>35</td>
-      <td class="bg-danger">21/11/2020</td>
-      <td class="bg-success">22/12/2020</td>
+      <td class="text-center">35</td>
+      <td class="bg-danger text-white text-center">21/11/2020</td>
+      <td class="bg-success text-white text-center">22/12/2020</td>
     </tr>
-    <tr>
+    <tr class="text-center">
       <th scope="row">2</th>
-      <td>40</td>
-      <td class="bg-warning">21/11/2020</td>
-      <td class="bg-success">22/12/2020</td>
+      <td class="text-center">40</td>
+      <td class="bg-warning text-white text-center">21/11/2020</td>
+      <td class="bg-success text-white text-center">22/12/2020</td>
     </tr>
-    <tr>
+    <tr class="text-center">
       <th scope="row">3</th>
-      <td>225</td>
-      <td class="bg-success">21/11/2020</td>
-      <td class="bg-success">22/12/2020</td>
+      <td class="text-center">225</td>
+      <td class="bg-success text-white text-center">21/11/2020</td>
+      <td class="bg-success text-white text-center">22/12/2020</td>
     </tr>
   </tbody>
 </table>
     </div>
-    
     <div class="col">
-    <table class="table table-dark">
+    <table class="table table-white">
+    <div class="row">
+    <div class="col">
     جديد التعاميم
+    </div>
+    <div class="col text-left">
+    <a href="#"> <i class="fas fa-eye"> شاهد الكل</i> </a>
+    </div>
   <thead>
-    <tr>
+    <tr class="text-center">
       <th scope="col">#</th>
       <th scope="col">تاريخ التعميم</th>
       <th scope="col">اهمية التعميم</th>
@@ -55,23 +62,23 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="text-center">
       <th scope="row">1</th>
-      <td>10/03/2020</td>
-      <td>مهم جداً</td>
-      <td><button type="button" class="btn btn-danger btn-sm">المزيد</button></td>
+      <td class="text-center">10/03/2020</td>
+      <td class="text-center">مهم جداً</td>
+      <td class="pt-2 pb-0 text-center"><button type="button" class="btn btn-danger btn-sm text-white">المزيد</button></td>
     </tr>
-    <tr>
+    <tr class="text-center">
       <th scope="row">2</th>
-      <td>12/03/2020</td>
-      <td>عادي</td>
-      <td><button type="button" class="btn btn-warning btn-sm">المزيد</button></td>
+      <td class="text-center">12/03/2020</td>
+      <td class="text-center">عادي</td>
+      <td class="pt-2 pb-0 text-center"><button type="button" class="btn btn-warning btn-sm text-white">المزيد</button></td>
     </tr>
-    <tr>
+    <tr class="text-center">
       <th scope="row">3</th>
-      <td>15/03/2020</td>
-      <td>مهم</td>
-      <td><button type="button" class="btn btn-success btn-sm">المزيد</button></td>
+      <td class="text-center">15/03/2020</td>
+      <td class="text-center">مهم</td>
+      <td class="pt-2 pb-0 text-center"><button type="button" class="btn btn-success btn-sm text-white">المزيد</button></td>
     </tr>
   </tbody>
 </table>
