@@ -2,15 +2,25 @@
 #Connect to the database
 require_once '../includes/source/dp_connect.php';
 #Create a new Tables if not exist
-$CREATEDATABASE = "CREATE DATABASE IF NOT EXISTS `mydb`;";
-$DownloadHistory = "CREATE TABLE `login`.`downloadhistory` (
+$CREATEDATABASE = $conn->query ("CREATE DATABASE IF NOT EXISTS `mydb`");
+
+$DownloadHistory = $conn->query ("CREATE TABLE `login`.`downloadhistory` (
     `id` int(6) NOT NULL AUTO_INCREMENT,
     `jobNumber` varchar(11) NOT NULL,
     `dateAndTime` datetime NOT NULL,
     `fileName` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
-   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
 
+$notificationsystem ="CREATE TABLE `notifications` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `type` text NOT NULL,
+  `message` text NOT NULL,
+  `status` text NOT NULL,
+  `level` text NOT NULL COMMENT 'إسم المستخدم المرسل له',
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
 $LoginAndLogoutHistory = "";
 
 $RecordOldVersionsOfFiles = "";
@@ -35,11 +45,29 @@ $Users = "CREATE TABLE IF NOT EXISTS `mydb`.`users` (
 $ValidityOfLicenses = "";
 $BranchFilesAndUploadAndUpdate = "";
 
-if (mysqli_query($conn, $CREATEDATABASE, $DownloadHistory, $Users)) {
-    echo "All Tables created successfully";
-} else {
-    echo "Error creating table: " . mysqli_error($conn);
-}
+ if (isset($_POST['submit'])) {
+        if ($CREATEDATABASE === TRUE)
+		{echo "تم إنشاء قاعدة البيانات بنجاح";} 
+else{echo "خطأ، لم يتم انشاء كافة الجداول في قاعدة البيانات: " . $conn->error;}
+ }
 
-mysqli_close($conn);
+
+?>
+<form>
+<input type="submit" name="submit"/>هل تريد تثبيت كافة قواعد البيانات
+</form>
+
+<form method="post">
+    <input type="submit" name="test" id="test" value="RUN" /><br/>
+</form>
+
+<?php
+
+function testfun()
+{
+   echo "Your test function on button click is working";
+}
+if(array_key_exists('test',$_POST)){
+   testfun();
+}
 ?>
