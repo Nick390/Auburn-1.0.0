@@ -25,6 +25,39 @@ Please review the license.md file.
 
 ##### Other licenses
 Please review the license file.
+
+##### The internal structure of the files
+Auburn/
+├── admin/
+├── ckeditor/
+│   ├── adapters/
+│   ├── lang/
+│   ├── plugins/ 
+│   │   ├── dialog/
+│   │   │   └── styles/
+│   │   └── link/ 
+│   │       ├── dialogs/
+│   │       └── images/ ├── hidpi/
+│   ├── skins/
+│   │   └── moono-lisa/
+│   │       └── images/
+│   │           └── hidpi/
+│   └── vendor/
+│
+├── config/
+├── images/
+├── includes/
+│   ├── libraries/
+│   ├── php/
+│   └── source/
+│
+├── licenses/
+├── pages/
+├── scripts/
+├── style/
+    ├── css/
+    └── webfonts/
+
 ---
 #### How to use?
 ---
