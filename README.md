@@ -27,36 +27,36 @@ Please review the license.md file.
 Please review the license file.
 
 ##### The internal structure of the files
-Auburn/
-├── admin/
-├── ckeditor/
-│   ├── adapters/
-│   ├── lang/
-│   ├── plugins/ 
-│   │   ├── dialog/
-│   │   │   └── styles/
-│   │   └── link/ 
-│   │       ├── dialogs/
-│   │       └── images/ ├── hidpi/
-│   ├── skins/
-│   │   └── moono-lisa/
-│   │       └── images/
-│   │           └── hidpi/
-│   └── vendor/
-│
-├── config/
-├── images/
-├── includes/
-│   ├── libraries/
-│   ├── php/
-│   └── source/
-│
-├── licenses/
-├── pages/
-├── scripts/
-├── style/
-    ├── css/
-    └── webfonts/
+Auburn/ <br/>
+├── admin/ <br/>
+├── ckeditor/ <br/>
+│   ├── adapters/ <br/>
+│   ├── lang/ <br/>
+│   ├── plugins/ <br/>
+│   │   ├── dialog/ <br/>
+│   │   │   └── styles/ <br/>
+│   │   └── link/ <br/>
+│   │       ├── dialogs/ <br/>
+│   │       └── images/ ├── hidpi/ <br/>
+│   ├── skins/ <br/>
+│   │   └── moono-lisa/ <br/>
+│   │       └── images/ <br/>
+│   │           └── hidpi/ <br/>
+│   └── vendor/ <br/>
+│ <br/>
+├── config/ <br/>
+├── images/ <br/>
+├── includes/ <br/>
+│   ├── libraries/ <br/>
+│   ├── php/ <br/>
+│   └── source/ <br/>
+│<br/>
+├── licenses/ <br/>
+├── pages/ <br/>
+├── scripts/ <br/>
+├── style/ <br/>
+    ├── css/ <br/>
+    └── webfonts/ <br/>
 
 ---
 #### How to use?
