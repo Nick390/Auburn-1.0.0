@@ -1,30 +1,40 @@
-# PortalGR1.0.5
-The official and designated file management system for the licenses, This system have been made to organize files,
-give access to what have the authority to see this files Regulating the management of government relations in any company or institution.
+# Auburn 1.0.0
+It is an open source content management system or CMS.
 #### About the system
 ---
 ##### This system works for:
-* Those within the borders of the Kingdom of Saudi Arabia.
-* The system was built with basic standards and custom software codes.
+* For companies, individuals, or small or large global organizations.
+* The system is completely free, we recommend that you download the stable version.
 
-##### CDN Was used
-* A Bootstrap library was also used To increase the consistency of formatting elements in the system.
-* CDN jsDelivr & jQuery It was used for some items on the site.
-
-##### The applicable version
-The current version of the system currently in use is: 1.0.3.4.By the government relations department in the southern region of Herfy Food Services Company.
+##### Multiple libraries were used which is:
+* Bootstrap 4.5.2.
+* JsDelivr & jQuery 3.5.1.
+* CKEditor 4.14.1.
+* Popper 1.16.1.
+* Fontawesome free 5.14.0 web.
 
 ##### Minimum requirements for use is:
-1. Server space 50 MB and up.
+1. Server space 5 GB and up.
 2. PHP 7.4.1 and up.
 3. Apache 2.4.41 and up.
 4. MySQL 10.4.11 and up.
 5. This system has been tried on Windows Server only.
+
+##### Auburn License:
+Please review the license.md file.
+
+##### Other licenses
+Please review the license file.
+---
+#### How to use?
 ---
 ##### How to use with Windows servers?
 * Provide the minimum requirements.
-* Create Database: `mydb`.
+* Create Database: `mydb` or Create your own database and add it in the following files `includes/source/db.php` & `includes/source/dp_connect.php` & `includes/source/function.php`.
 * Clone or download.
+* Go to File `config/tables.config.php` and execute all databases manually.
+* Create an account.
+* You are ready to use the system.
 ``` 
 https://github.com/Nick390/PortalGR1.0.5.git
 
