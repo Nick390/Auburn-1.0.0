@@ -5,7 +5,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
     <li class="breadcrumb-item"><a href="/pages/account_notifications.php">الإشعارات</a></li>
-    <li class="breadcrumb-item active"><?php echo 'إشعار رقم '.$i['id']?></li>
+    <li class="breadcrumb-item active"><?php echo 'إشعار رقم '.$id = $_GET['id']; ?></li>
   </ol>
 </nav>
 <br>
