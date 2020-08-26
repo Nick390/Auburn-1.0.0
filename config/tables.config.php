@@ -18,8 +18,9 @@ $notificationsystem ="CREATE TABLE `notifications` (
   `type` text NOT NULL,
   `message` text NOT NULL,
   `status` text NOT NULL,
-  `level` text NOT NULL COMMENT 'إسم المستخدم المرسل له',
-  `date` datetime NOT NULL
+  `level` text NOT NULL COMMENT 'رتبة المستخدم',
+  `date` datetime NOT NULL,
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
 $LoginAndLogoutHistory = "";
 
