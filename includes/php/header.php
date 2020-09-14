@@ -48,8 +48,14 @@ tr th, tr td {
 .ico-margin{
     margin-right: 7rem;
 }
+.fas{
+    margin-left: 5px;
+}
+[data-key].fas{
+    margin-right: 5px;
+}
     </style>
 </head>
-<body>
+<body lang="ar">
  
     

@@ -12,8 +12,8 @@
 <div class="bg-light border-right navbar-light" id="sidebar-wrapper">
   <div class="sidebar-heading"><a class="navbar-brand" href="/admin/dashboard.php">Auburn </a></div>
   
-  <div class="list-group list-group-flush">
-    <a href="/admin/dashboard.php" class="list-group-item list-group-item-action bg-light"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a>
+  <div class="list-group list-group-flush" >
+    <a href="/admin/dashboard.php" class="list-group-item list-group-item-action bg-light" data-key="controlpanel"><i class="fas fa-tachometer-alt"></i></a>
     <a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fas fa-cogs"></i> الإعدادات</a>
     <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-clone"></i> الصفحات</a>
     <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-pencil-ruler"></i> الموضوع</a>
