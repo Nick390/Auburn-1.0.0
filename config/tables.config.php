@@ -71,4 +71,10 @@ function testfun()
 if(array_key_exists('test',$_POST)){
    testfun();
 }
+
+/*
+* You can reset the counter with:
+* ALTER TABLE `tablename` AUTO_INCREMENT = 1
+* in sql
+*/
 ?>

@@ -57,10 +57,12 @@
                 <small><i><?php echo date('F j, Y, g:i a',strtotime($i['date'])) ?></i></small><br/>
                   <?php 
                 if($i['type']=='معلومة'){
-                  echo ($i['name'])."<br/>معلومة جديدة";
+                  echo ($i['name'])."<br/>معلومة جديدة لك";
               }else if($i['type']=='إجتماع'){
                   echo ucfirst($i['name'])."<br/>تم تحديد موعد إجتماع جديد";
-              }else if($i['type']=='تحذير'){
+              }else if($i['type']=='تنويه'){
+                echo ucfirst($i['name'])."<br/>تنوية جديد لك";
+            }else if($i['type']=='تحذير'){
                 echo ucfirst($i['name'])."<br/>تحذير مهم للغاية لك";
             }else if($i['type']=='إنذار'){
               echo ucfirst($i['name'])."<br/>إنذار جديد لك";
