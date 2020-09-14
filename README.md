@@ -69,9 +69,9 @@ Auburn/ <br/>
 * Create an account.
 * You are ready to use the system.
 ``` 
-https://github.com/Nick390/PortalGR1.0.5.git
+https://github.com/Nick390/Auburn-1.0.0.git
 
-git@github.com:Nick390/PortalGR1.0.5.git
+git@github.com:Nick390/Auburn-1.0.0.git
 ```
 * Extract the files to main directory.
 * Delete zip file if it's there. 
@@ -131,12 +131,12 @@ $ sudo tar -xzvf PortalGR1.0.5-master.tar.gz (You must switch to root $ sudo su 
 6. Troubleshooting
 One important addition to setting up PortalGR1.0.5. Permission errors with the PortalGR1.0.5 installation can be fixed with the following command
 ```
-$ chown -R www-data:www-data /var/www/html/* (You have to set a DNS) (Some files may be you me need to deleted because they are useless like PortalGR1.0.5-master.tar & PortalGR1.0.5-master) (If there is a file index.html you need to delete
+$ chown -R www-data:www-data /var/www/html/* (You have to set a DNS) (Some files may be you me need to deleted because they are useless like Auburn1.0.0-master.tar & Auburn1.0.0-master) (If there is a file index.html you need to delete
 so it's not going to stop the process)
 ```
 To delete a directory do `rm directory_name/ -r`.
-To delete a PortalGR1.0.5-master.tar do `rm PortalGR1.0.5-master.tar`.
-To delete a PortalGR1.0.5-master do `rm PortalGR1.0.5-master -r`.
+To delete a PortalGR1.0.5-master.tar do `rm Auburn1.0.0-master.tar`.
+To delete a PortalGR1.0.5-master do `rm Auburn1.0.0-master -r`.
 Remember, you should always move all files to the main directory.
 To move all file to main directory do `mv * directory_path/`.
 ###### Good Luck
