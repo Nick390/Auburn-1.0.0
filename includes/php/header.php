@@ -2,6 +2,7 @@
 
 include_once '../includes/source/session.php';
 require_once '../includes/source/dp_connect.php';
+include_once '../includes/source/function.php';
 
 ?>
 <!DOCTYPE html>

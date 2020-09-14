@@ -22,15 +22,11 @@
                             <form class="card card-sm">
                                 <div class="card-body row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <i class="fas fa-search h4 text-body"></i>
+                                        <i class="fas fa-search h4 text-body mb-0"></i>
                                     </div>
                                     <!--end of col-->
-                                    <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="إبحث عن رقم فرع، حي، منطقة...">
-                                    </div>
-                                    <!--end of col-->
-                                    <div class="col-auto">
-                                        <button class="btn btn-lg btn-success" type="submit">بحث</button>
+                                    <div class="col mr-3 ml-3">
+                                        <input type="search" placeholder="إبحث عن رقم فرع، حي، منطقة..." class="form-control search-input form-control-lg form-control-borderless" data-table="customers-list"/>
                                     </div>
                                     <!--end of col-->
                                 </div>
@@ -40,7 +36,6 @@
                     </div>
 </div>
 <br/>
-<!--نموذج يجب إزالتة بعد ربط قاعدة البيانات حيث ان قاعدة البيانات يجب ان تتوفر على هذه البيانات-->
 <nav class="navbar">
     <a href="add-a-new-branch.php"><button class="btn btn-sm btn-primary">إضافة فرع جديد</button></a>
 </nav>
@@ -48,7 +43,7 @@
                 $query = "SELECT * FROM `add_a_new_branch` order by `id`";
                  if(count(fetchAll($query))>0)
 
-echo '<table class="table table-sm">
+echo '<table class="table table-sm customers-list">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -82,4 +77,43 @@ if ($result = $conn->query($query)) {
   echo '<div class="alert alert-danger" role="alert">يوجد مشكلة في قاعدة البيانات</div>';
 }
 ?>
+    <script>
+        (function(document) {
+            'use strict';
+
+            var TableFilter = (function(myArray) {
+                var search_input;
+
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+    </script>
 <?php include('../includes/php/pages-footer.php'); ?>

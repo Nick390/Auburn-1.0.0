@@ -28,6 +28,8 @@
                 </ul>
               </div>
             </div>
+    <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-newspaper"></i> المنشورات</a>
+    <a href="/admin/users-dashboard.php" class="list-group-item list-group-item-action bg-light"><i class="fas fa-users"></i> المستخدمين</a>
     <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-id-card-alt"></i> الحساب</a>
     <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-book"></i> دليل المستخدم</a>
    
