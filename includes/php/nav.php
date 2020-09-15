@@ -53,10 +53,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="dashboard.php"><?php echo $lang['ViewTheSite'] ?></a>
+          <a class="nav-link" href="dashboard.php"><?php echo $lang['Main'] ?></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="../pages/dashboard.php" target="_blank"><?php echo $lang['Main'] ?></a>
+          <a class="nav-link" href="../pages/dashboard.php" target="_blank"><?php echo $lang['ViewTheSite'] ?></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#"><i class="fas fa-adjust"></i></a>
