@@ -2,7 +2,6 @@
 
 include_once '../includes/source/session.php';
 require_once '../includes/source/dp_connect.php';
-include_once '../includes/source/function.php';
 
 ?>
 <!DOCTYPE html>
@@ -45,17 +44,8 @@ tr th, tr td {
 #upload-a-picture{
     color: #212529;
 }
-.ico-margin{
-    margin-right: 7rem;
-}
-.fas{
-    margin-left: 5px;
-}
-[data-key].fas{
-    margin-right: 5px;
-}
     </style>
 </head>
-<body lang="ar">
+<body>
  
     
