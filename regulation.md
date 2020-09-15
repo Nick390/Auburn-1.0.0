@@ -8,6 +8,8 @@ for a process push to github and the commit that have been written.
 * **Add** When adding a new property to an existing file.
 * **Delete** When a file is deleted.
 * **Remove** When removing a property from an existing file.
+* **Fix** When a bug of code is fixed or a property is fixed.
+
 ---
 #### How is the title chosen?
 An address is chosen on the largest thing that has been done,for example writing a file consisting of 1000 lines of 
