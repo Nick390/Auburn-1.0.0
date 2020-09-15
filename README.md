@@ -28,35 +28,37 @@ Please review the license file.
 
 ##### The internal structure of the files
 Auburn/ <br/>
-├── admin/ <br/>
-├── ckeditor/ <br/>
-│   ├── adapters/ <br/>
-│   ├── lang/ <br/>
-│   ├── plugins/ <br/>
-│   │   ├── dialog/ <br/>
-│   │   │   └── styles/ <br/>
-│   │   └── link/ <br/>
-│   │       ├── dialogs/ <br/>
-│   │       └── images/ ├── hidpi/ <br/>
-│   ├── skins/ <br/>
-│   │   └── moono-lisa/ <br/>
-│   │       └── images/ <br/>
-│   │           └── hidpi/ <br/>
-│   └── vendor/ <br/>
-│ <br/>
-├── config/ <br/>
-├── images/ <br/>
-├── includes/ <br/>
-│   ├── libraries/ <br/>
-│   ├── php/ <br/>
-│   └── source/ <br/>
-│<br/>
-├── licenses/ <br/>
-├── pages/ <br/>
-├── scripts/ <br/>
-├── style/ <br/>
-    ├── css/ <br/>
-    └── webfonts/ <br/>
+├───admin<br/>
+├───ckeditor<br/>
+│   ├───adapters<br/>
+│   ├───lang<br/>
+│   ├───plugins<br/>
+│   │   ├───dialog<br/>
+│   │   │   └───styles<br/>
+│   │   └───link<br/>
+│   │       ├───dialogs<br/>
+│   │       └───images<br/>
+│   │           └───hidpi<br/>
+│   ├───skins<br/>
+│   │   └───moono-lisa<br/>
+│   │       └───images<br/>
+│   │           └───hidpi<br/>
+│   └───vendor<br/>
+├───config<br/>
+├───images<br/>
+├───includes<br/>
+│   ├───lang<br/>
+│   ├───libraries<br/>
+│   ├───php<br/>
+│   └───source<br/>
+├───licenses<br/>
+├───pages<br/>
+├───plugins<br/>
+│   └───notifications<br/>
+├───scripts<br/>
+└───style<br/>
+    ├───css<br/>
+    └───webfonts<br/>
 
 ---
 #### How to use?
