@@ -20,32 +20,22 @@
 <div class="container m-0 p-0">
   <div class="row m-0 p-0">
     <div class="col-sm m-0 p-0">
-      <?php 
-          
-          if(isset($_POST['submit'])){
-			  $name = $_POST['name'];
-			  $message = $_POST['message'];
-			  $option = $_POST['option'];
-			  $level = $_POST['level'];
+	<?php 
 
-              $query ="INSERT INTO `notifications` (`id`, `name`, `type`, `message`, `status`, `level`, `date`) VALUES (NULL, '$name', '$option', '$message', 'unread','$level', CURRENT_TIMESTAMP)";
-              if(performQuery($query)){
-                  echo('<div class="alert alert-success text-right" role="alert">
-							تم إرسال الرسالة بنجاح
-						</div>');
-              }else{
-				  header('Location: NotificationSystemInPHP-master/message.php');
-				  echo('<div class="alert alert-danger text-right" role="alert">
-							لم يتم إرسال الرسالة
-						</div>');
-					
-			  }
-          }
-				
-          ?>
+if (isset($_SESSION['message'])):?>
+<div class="alert alert-<?=$_SESSION['msg_type']?> alert-dismissible fade show" role="alert">
+<?php
+echo $_SESSION['message'];
+unset($_SESSION['message']);
+?>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<?php endif ?>
 		  <h3>مرحباً بك في صفحة إرسال الإشعارات للمستخدمين</h3>
 		<p>الرجاء تعبئة البيانات التالية ومن ثم أنقر على إرسال</p>
-        <form method="post" class="form-inline">
+        <form method="post" class="form-inline" action="/admin/process-insert-notifcations.php">
 		<div class="form-row">
 		<div class="form-group col-md-12 mb-2">
 		  <label for="name" class="col-sm-2 col-form-label">إسم المرسل</label>
