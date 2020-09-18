@@ -11,6 +11,15 @@ $DownloadHistory = $conn->query ("CREATE TABLE `login`.`downloadhistory` (
     `fileName` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+$add_a_new_branch ="CREATE TABLE IF NOT EXISTS `add_a_new_branch` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `JobNumber` text NOT NULL,
+  `BranchNumber` text NOT NULL,
+  `Neighborhood` text NOT NULL,
+  `Region` text NOT NULL,
+  `TimeStamp` datetime NOT NULL,
+   PRIMARY KEY (`ID`)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
 
 $notificationsystem ="CREATE TABLE `notifications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

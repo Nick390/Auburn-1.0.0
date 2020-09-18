@@ -36,7 +36,6 @@ if(isset($_POST['submit'])) {
         تم إضافة الفرع بنجاح
         </div>');
       }else{
-      header('Location:');
       echo('<div class="alert alert-danger text-right" role="alert">
       يوجد مشكلة لم يتم إضافة الفرع إلى النظام حاول مره أخرى لاحقاً
       </div>');
