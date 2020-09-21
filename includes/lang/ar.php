@@ -15,6 +15,26 @@
                 "ViewTheSite" => "عرض الموقع",
                 "LogOut" => "تسجيل الخروج",
                 "lang_en" => "English",
-		        "lang_ar" => "العربية"
+                "lang_ar" => "العربية",
+                //title صفحة المشرف عنصر 
+                "ControlpanelTitle" => "لوحة التحكم",
+                "SettingsTitle" => "الإعدادات",
+                "PagesTitle" => "الصفحات",
+                "ThemesTitle" => "الموضوع",
+                "GalleryTitle" => "المعرض",
+                "PluginsTitle" => "الإضافات",
+                "PostsTitle" => "المنشورات",
+                "UsersTitle" => "المستخدمين",
+                "AccountTitle" => "الحساب",
+                "UserGuideTitle" => "دليل المستخدم",
+                "MainTitle" => "الرئيسية",
+                "ViewTheSiteTitle" => "عرض الموقع",
+                "LogOutTitle" => "تسجيل الخروج",
+                "lang_enTitle" => "English",
+                "lang_arTitle" => "العربية",
+                "langTitle" => "تغيير اللغة",
+                "AdminThemeTitle" => "تغيير إلى الوضع المظلم",
+                "NavbarTogglerTitle" => "تبديل وضع شريط التنقل",
+                "LogoTitle" => "صفحة Auburn الرئيسية",
                 );
 ?>
