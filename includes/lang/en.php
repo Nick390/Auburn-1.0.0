@@ -36,5 +36,16 @@
                 "AdminThemeTitle" => "Change to dark mode",
                 "NavbarTogglerTitle" => "Toggle navigation bar mode",
                 "LogoTitle" => "Auburn home page",
+                //Super Admin page; Plugins Section
+                "PluginPageTitle" => "Plugins",
+                "PluginUpload" => "Upload Plugin",
+                "PluginPageDescription" => "On this page you will find all the Plugins on the site",
+                "PluginTableCheckboxTitle" => "",
+                "PluginTableTitle" => "Plugin",
+                "PluginTableDescription" => "Description",
+                "PluginEditButton" => "Edit",
+                "PluginDeactivateButton" => "Deactivate",
+                "PluginActivateButton" => "Activate",
+                "PluginSettingsButton" => "Settings",
                 );
 ?>

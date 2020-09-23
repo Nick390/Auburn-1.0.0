@@ -36,5 +36,16 @@
                 "AdminThemeTitle" => "تغيير إلى الوضع المظلم",
                 "NavbarTogglerTitle" => "تبديل وضع شريط التنقل",
                 "LogoTitle" => "صفحة Auburn الرئيسية",
+                //صفحة المشرف قسم الإضافات
+                "PluginPageTitle" => "الإضافات",
+                "PluginUpload" => "إرفع إضافة",
+                "PluginPageDescription" => "في هذه الصفحة ستجد كافة الإضافات الموجوده في الموقع",
+                "PluginTableCheckboxTitle" => "انقر لتحديد كافة العناصر",
+                "PluginTableTitle" => "الإضافة",
+                "PluginTableDescription" => "الوصف",
+                "PluginEditButton" => "تعديل",
+                "PluginDeactivateButton" => "تعطيل",
+                "PluginActivateButton" => "تفعيل",
+                "PluginSettingsButton" => "الإعدادات",
                 );
 ?>

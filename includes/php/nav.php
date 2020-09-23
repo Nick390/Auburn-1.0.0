@@ -24,6 +24,7 @@
 						<div id="dropdown-lvl1" class="panel-collapse collapse">
 							<div class="panel-body">
 								<ul class="nav navbar-nav">
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/plugins.php">كافة الإضافات</a></li>
 									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit-a-new-notification.php">إرسال إشعار جديد</a></li>
                   <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php">عرض كافة الإشعارات المرسلة</a></li>
                 </ul>
