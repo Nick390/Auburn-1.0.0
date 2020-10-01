@@ -6,6 +6,8 @@
                 "Pages" => "Pages",
                 "Themes" => "Themes",
                 "Gallery" => "Gallery",
+                "All Files" => "All Files",
+                "Upload New File" => "Upload New File",
                 "Plugins" => "Plugins",
                 "Posts" => "Posts",
                 "Users" => "Users",
@@ -47,5 +49,24 @@
                 "PluginDeactivateButton" => "Deactivate",
                 "PluginActivateButton" => "Activate",
                 "PluginSettingsButton" => "Settings",
+                 //Super Admin page; Gallery Section
+                "Upload New File Button" => "Upload New File",
+                "Search For A File Using Its Name Or Format" => "Search for a file using it's name or format",
+                //Super Admin page; Gallery Section Upload Multiple Files page
+                "UploadButton" => "Upload",
+                "Page Title" => "Upload one or more files",
+                "Page Info" => "Select files to be uploaded, with a maximum of 20 files at one time",
+                //"Label Language" => "تصفح الملفات",
+                //"Choose file" => "إختر ملف",
+                //Super Admin page; Gallery Section Upload Multiple Files page error messages
+                 "There is no error, the file uploaded with success" => "There is no error, the file uploaded with success",
+                 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "The uploaded file exceeds the upload_max_filesize directive in php.ini",
+                 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the html form" => "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the html form",
+                 "The uploaded file was only partially uploaded" => "The uploaded file was only partially uploaded",
+                 "No file was uploaded" => "No file was uploaded",
+                 "Missing a temporary folder" => "Missing a temporary folder",
+                 "Failed to  write file to disk" => "Failed to  write file to disk",
+                 "A PHP extension stopped the file upload" => "A PHP extension stopped the file upload",
+                 "Invalid file extension!" => "Invalid file extension!",
                 );
 ?>

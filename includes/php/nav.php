@@ -17,11 +17,21 @@
     <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['SettingsTitle'] ?>"> <i class="fas fa-cogs"></i> <?php echo $lang['Settings'] ?></a>
     <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['PagesTitle'] ?>"><i class="fas fa-clone"></i> <?php echo $lang['Pages'] ?></a>
     <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['ThemesTitle'] ?>"><i class="fas fa-pencil-ruler"></i> <?php echo $lang['Themes'] ?></a>
-    <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['GalleryTitle'] ?>"><i class="fas fa-photo-video"></i> <?php echo $lang['Gallery'] ?></a>
-    <a class="list-group-item list-group-item-action bg-light" data-toggle="collapse" href="#dropdown-lvl1"  title="<?php echo $lang['PluginsTitle'] ?>"><i class="fas fa-puzzle-piece"></i> <?php echo $lang['Plugins'] ?>
+    <a class="list-group-item list-group-item-action bg-light" data-toggle="collapse" href="#dropdown-Gallery"   title="<?php echo $lang['GalleryTitle'] ?>"><i class="fas fa-photo-video"></i> <?php echo $lang['Gallery'] ?>
+    <i class="fas fa-caret-down"></i></a>
+        <!-- Dropdown level 1 -->
+						<div id="dropdown-Gallery" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/gallery.php"><?php echo $lang['All Files'] ?></a></li>
+									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/UploadMultipleFiles.php"><?php echo $lang['Upload New File'] ?></a></li>
+                </ul>
+              </div>
+            </div>
+    <a class="list-group-item list-group-item-action bg-light" data-toggle="collapse" href="#dropdown-Plugins"  title="<?php echo $lang['PluginsTitle'] ?>"><i class="fas fa-puzzle-piece"></i> <?php echo $lang['Plugins'] ?>
     <i class="fas fa-caret-down"></i></a>
 						<!-- Dropdown level 1 -->
-						<div id="dropdown-lvl1" class="panel-collapse collapse">
+						<div id="dropdown-Plugins" class="panel-collapse collapse">
 							<div class="panel-body">
 								<ul class="nav navbar-nav">
                   <li><a class="list-group-item list-group-item-action bg-light" href="/admin/plugins.php">كافة الإضافات</a></li>

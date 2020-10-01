@@ -6,6 +6,8 @@
                 "Pages" => "الصفحات",
                 "Themes" => "الموضوع",
                 "Gallery" => "المعرض",
+                "All Files" => "كافة الملفات",
+                "Upload New File" => "إرفع ملف جديد",
                 "Plugins" => "الإضافات",
                 "Posts" => "المنشورات",
                 "Users" => "المستخدمين",
@@ -47,5 +49,24 @@
                 "PluginDeactivateButton" => "تعطيل",
                 "PluginActivateButton" => "تفعيل",
                 "PluginSettingsButton" => "الإعدادات",
+                //صفحة المشرف قسم المعرض
+                "Upload New File Button" => "إرفع ملف جديد",
+                "Search For A File Using Its Name Or Format" => "إبحث عن ملف باستخدام إسمة او الصيغة",
+                // صفحة المشرف قسم المعرض صفحة رفع ملفات جديدة
+                "UploadButton" => "إرفع",
+                "Page Title" => "إرفع ملف او عدة ملفات",
+                "Page Info" => "إختر الملفات المراد رفعها بحد اقصى 20 ملف للمرة الواحدة",
+                //"Label Language" => "تصفح الملفات",
+                //"Choose file" => "إختر ملف",
+                // صفحة المشرف قسم المعرض صفحة رفع ملفات جديدة رسائل الأخطاء
+                 "There is no error, the file uploaded with success" => "لا يوجد خطأ ، تم تحميل الملف بنجاح",
+                 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "يتجاوز الملف الذي تم تحميله التوجيه upload_max_filesize في php.ini",
+                 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the html form" => "يتجاوز الملف الذي تم تحميله توجيه MAX_FILE_SIZE المحدد في نموذج html",
+                 "The uploaded file was only partially uploaded" => "تم تحميل الملف الذي تم تحميله جزئيًا فقط",
+                 "No file was uploaded" => "لا يوجد ملف تم تحميله",
+                 "Missing a temporary folder" => "في عداد المفقودين مجلد مؤقت",
+                 "Failed to  write file to disk" => "فشل في إرسال الملف إلى القرص",
+                 "A PHP extension stopped the file upload" => "أوقف امتداد PHP تحميل الملف",
+                 "Invalid file extension!" => "صيغة الملف غير صالحة!",
                 );
 ?>
