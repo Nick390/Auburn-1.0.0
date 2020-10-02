@@ -24,3 +24,12 @@ You must put an asterisk`*`before each item and a point at the end of each item 
 * Any modification less than 30 characters is preferable not to be (push origin).
 * Try all the time to format the code as possible.
 * Put a lot of notes in files especially long files or require modification before applying that kind of file or all of them.
+
+---
+#### How to format file and folders names in the system kernel?
+Using uppercase and lowercase letters was useful in the past, but now because the project has become large, it was decided to make the names in small English letters only; And the words are separated with a symbol `_`.
+
+#### How are tables named in the database?
+* No specific method of naming has been specified, but now there is a law so that all column names must be in lowercase letters only.
+* The underscore symbol `_` is used to distinguish between words.
+* A comments must be created to describe what each column does.
