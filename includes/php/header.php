@@ -13,7 +13,7 @@ require_once '../includes/source/dp_connect.php';
     <link rel="stylesheet" href="/style/bootstrap.min.css">
     <link rel="stylesheet" href="/style/admin-sidebar.css">
     <link rel="stylesheet" href="/style/css/all.min.css">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/admin/files/favicon.ico" />
     <style>
  *{
    direction: rtl;

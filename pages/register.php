@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>تسجيل جديد - بوابة العلاقات الحكومية</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/admin/files/favicon.ico" />
     <link rel="stylesheet" href="/style/signup.css">
   </head>
   <body class="text-center">
       <!-- register form -->
     <form method="post" action="register.php" name="registerform" class="form-signin">
-        <img class="mb-4" src="/images/logo.svg" alt="" width="72" height="72">
+        <img class="mb-4" src="/admin/files/logo.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">تسجيل حساب جديد</h1>
        
         <?php

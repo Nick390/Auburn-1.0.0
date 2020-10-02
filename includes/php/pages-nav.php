@@ -8,7 +8,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="/">
-    <img src="/images/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="/admin/files/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
       Auburn
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
