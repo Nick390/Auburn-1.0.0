@@ -26,7 +26,7 @@ You must put an asterisk`*`before each item and a point at the end of each item 
 * Put a lot of notes in files especially long files or require modification before applying that kind of file or all of them.
 
 ---
-#### How to format file and folders names in the system kernel?
+#### How to format file and folders names in the system core?
 Using uppercase and lowercase letters was useful in the past, but now because the project has become large, it was decided to make the names in small English letters only; And the words are separated with a symbol `_`.
 
 #### How are tables named in the database?
