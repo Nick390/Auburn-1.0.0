@@ -31,6 +31,14 @@ $notificationsystem ="CREATE TABLE `notifications` (
   `date` datetime NOT NULL,
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+
+$uploadmultiplefiles ="CREATE TABLE `uploadmultiplefiles` (
+   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing file_id of each file, unique index',
+   `filename` varchar(255) NOT NULL COMMENT 'file name without the extensions',
+   `imgdir` varchar(255) NOT NULL COMMENT 'location where the file is stored',
+   `UploadTimestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'the time where the file was uploaded to the system',
+   PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4";
 $LoginAndLogoutHistory = "";
 
 $RecordOldVersionsOfFiles = "";
@@ -85,6 +93,11 @@ if(array_key_exists('test',$_POST)){
 /*
 * You can reset the counter with:
 * ALTER TABLE `tablename` AUTO_INCREMENT = 1
+* in sql
+*/
+/*
+* You can how the table was create with:
+* SHOW CREATE TABLE `tablename`;
 * in sql
 */
 ?>
