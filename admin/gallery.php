@@ -2,9 +2,15 @@
 <?php include('../includes/php/nav.php'); ?>
 <?php $mysqli = $conn; ?>
 
-<div class="container">
+<div class="container p-0 m-0">
     <br/>
-	<div class="row justify-content-center">
+    <div class="row p-0 m-0">
+        <div class="col p-0 m-0">
+        <a href="/admin/UploadMultipleFiles.php"><button class="btn btn-sm btn-primary"><?php echo $lang['Upload New File Button'] ?></button></a>
+                    </div>
+                    </div>
+    <br/>
+	<div class="row justify-content-right">
                         <div class="col-12 col-md-10 col-lg-8">
                             <form class="card card-sm">
                                 <div class="card-body row no-gutters align-items-center p-1 m-1 pr-3">
@@ -21,12 +27,6 @@
                         </div>
     </div>
                         <!--end of col-->
-    <br/>
-    <div class="row">
-        <div class="col">
-        <a href="/admin/UploadMultipleFiles.php"><button class="btn btn-sm btn-primary"><?php echo $lang['Upload New File Button'] ?></button></a>
-                    </div>
-                    </div>
     <br/>
 </div>
 <br/>
@@ -51,7 +51,7 @@
 
 
     <tr>
-      <td style="width: 2%;" class="text-right"><input type="checkbox" class="form-check-input"></td>
+      <td style="width: 2%;" class="text-right"><input type="checkbox" class="ml-2"></td>
       <td><?php echo "<img class='border border-dark' src='{$data['imgdir']}' alt='{$data['filename']}' height='64px';
     width='64px';>"; ?></td>
       <td class="d-none d-sm-block"><?php echo "{$data['filename']}"; ?></td>

@@ -1,5 +1,10 @@
 <?php
 	$lang = array(
+                //صفحة المشرف المميز إتجاة الصفحة
+                "Page Direction" => "ar",
+                "Page Direction CSS direction" => "rtl",
+                "Page Direction CSS text-align" => "right",
+                "Margin" => "ml-auto",
                 //صفحة المشرف المميز
                 "Controlpanel" => "لوحة التحكم",
                 "Settings" => "الإعدادات",
@@ -9,6 +14,7 @@
                 "All Files" => "كافة الملفات",
                 "Upload New File" => "إرفع ملف جديد",
                 "Plugins" => "الإضافات",
+                "All Plugins" => "كافة الإضافات",
                 "Posts" => "المنشورات",
                 "Users" => "المستخدمين",
                 "Account" => "الحساب",
@@ -49,6 +55,7 @@
                 "PluginDeactivateButton" => "تعطيل",
                 "PluginActivateButton" => "تفعيل",
                 "PluginSettingsButton" => "الإعدادات",
+                "Search For A Plugin" => "إبحث عن إضافة ...",
                 //صفحة المشرف قسم المعرض
                 "Upload New File Button" => "إرفع ملف جديد",
                 "Search For A File Using Its Name Or Format" => "إبحث عن ملف باستخدام إسمة او الصيغة",
@@ -72,5 +79,11 @@
                  "Failed to  write file to disk" => "فشل في إرسال الملف إلى القرص",
                  "A PHP extension stopped the file upload" => "أوقف امتداد PHP تحميل الملف",
                  "Invalid file extension!" => "صيغة الملف غير صالحة!",
+                 //صفحة المشرف المميز، قسم المستخدمين
+                "Search For A User or E-mail" => "إبحث عن مستخدم بإستخدام إسمه او البريد الإلكتروني ...",
+                "User Name" => "إسم المستخدم",
+                "E-mail" => "البريد الإلكتروني",
+                "Account Date Creation" => "تاريخ ووقت إنشاء الحساب",
+                "Add New User Button" => "إضافة مستخدم جديد",
                 );
 ?>

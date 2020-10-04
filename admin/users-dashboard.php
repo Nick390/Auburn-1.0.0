@@ -3,13 +3,12 @@
 <style>
 </style>
 <div class="container">
-    <br/>
-    <div class="row">
-        <div class="col-sm">
-            <h3>حسابات المستخدمين</h3>
-            <p>في هذه الصفحة ستجد كافة المعلومات عن كافة المستخدمين</p>
-        </div>
-    </div>
+<br/>
+    <div class="row p-0 m-0">
+        <div class="col p-0 m-0">
+        <a href="/admin/add_new_user.php"><button class="btn btn-sm btn-primary"><?php echo $lang['Add New User Button'] ?></button></a>
+                    </div>
+                    </div>
     <br/>
 	<div class="row">
         <div class="col-12 col-md-10 col-lg-8">
@@ -20,7 +19,7 @@
                     </div>
                         <!--end of col-->
                     <div class="col mr-3 ml-3">
-                        <input type="search" placeholder="<?php echo $lang['Search For A File Using Its Name Or Format'] ?>" class="form-control search-input form-control-lg form-control-borderless" data-table="gallery-list"/>
+                        <input type="search" placeholder="<?php echo $lang['Search For A User or E-mail']; ?>" class="form-control search-input form-control-lg form-control-borderless" data-table="gallery-list"/>
                     </div>
                                     <!--end of col-->
                 </div>
@@ -40,9 +39,9 @@
         <tr>
           <th class="border-bottom-0 align-middle"><input type="checkbox" id="select-all" class="ml-2"></th>
           <th class="border-bottom-0 align-middle">#</th>
-          <th class="border-bottom-0 align-middle">إسم المستخدم</th>
-          <th class="align-middle d-none d-sm-block border-bottom-0">البريد الإلكتروني</th>
-          <th class="border-bottom-0 align-middle">تاريخ ووقت إنشاء الحساب</th>
+          <th class="border-bottom-0 align-middle"><?php echo $lang['User Name']; ?></th>
+          <th class="align-middle d-none d-sm-block border-bottom-0"><?php echo $lang['E-mail']; ?></th>
+          <th class="border-bottom-0 align-middle"><?php echo $lang['Account Date Creation']; ?></th>
         </tr>
       </thead>
       <tbody>
@@ -55,7 +54,7 @@ if ($result = $conn->query($query)) {
         $field5name = $row["user_date_created"];
 
         echo ' <tr>
-                  <td><input type="checkbox" id="select-all" class="ml-2"></td>
+                  <td style="width: 2%;" class="text-right"><input type="checkbox" class="ml-2"></td>
                   <td>'.$field1name.'</td> 
                   <td>'.$field2name.'</td> 
                   <td class="d-none d-sm-block">'.$field4name.'</td>

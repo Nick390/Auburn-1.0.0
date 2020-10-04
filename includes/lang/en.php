@@ -1,5 +1,10 @@
 <?php
 	$lang = array(
+                //Super Admin Page Direction
+                "Page Direction" => "en",
+                "Page Direction CSS direction" => "ltr",
+                "Page Direction CSS text-align" => "left",
+                "Margin" => "mr-auto",
                 //Super Admin page
                 "Controlpanel" => "Control Panel",
                 "Settings" => "Settings",
@@ -9,6 +14,7 @@
                 "All Files" => "All Files",
                 "Upload New File" => "Upload New File",
                 "Plugins" => "Plugins",
+                "All Plugins" => "All Plugins",
                 "Posts" => "Posts",
                 "Users" => "Users",
                 "Account" => "Account",
@@ -49,12 +55,13 @@
                 "PluginDeactivateButton" => "Deactivate",
                 "PluginActivateButton" => "Activate",
                 "PluginSettingsButton" => "Settings",
+                "Search For A Plugin" => "Search For A Plugin ...",
                  //Super Admin page; Gallery Section
                 "Upload New File Button" => "Upload New File",
                 "Search For A File Using Its Name Or Format" => "Search for a file using it's name or format",
                 "File" => "File Name",
                 "URL" => "URL",
-                "Uplode Date" => "Uplode Dat",
+                "Uplode Date" => "Uplode Date",
                 "Checkbox Title" => "Click to select all items",
                 //Super Admin page; Gallery Section Upload Multiple Files page
                 "UploadButton" => "Upload",
@@ -72,5 +79,11 @@
                  "Failed to  write file to disk" => "Failed to  write file to disk",
                  "A PHP extension stopped the file upload" => "A PHP extension stopped the file upload",
                  "Invalid file extension!" => "Invalid file extension!",
+                //Super Admin page; Users Section
+                "Search For A User or E-mail" => "Search for a user using his name or email ...",
+                "User Name" => "User Name",
+                "E-mail" => "E-mail",
+                "Account Date Creation" => "Account Date Creation",
+                "Add New User Button" => "Add New Use",
                 );
 ?>

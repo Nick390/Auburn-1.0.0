@@ -10,7 +10,12 @@
 <!-- Sidebar -->
 
 <div class="bg-light border-right navbar-light" id="sidebar-wrapper">
-  <div class="sidebar-heading"><a class="navbar-brand" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">Auburn </a></div>
+  <div class="sidebar-heading">
+    <a class="navbar-brand" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">
+    <img src="../admin/files/logo.svg" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+    Auburn 
+  </a>
+</div>
   
   <div class="list-group list-group-flush" >
     <a href="/admin/dashboard.php" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['ControlpanelTitle'] ?>"><i class="fas fa-tachometer-alt"></i> <?php echo $lang['Controlpanel'] ?></a>
@@ -34,7 +39,7 @@
 						<div id="dropdown-Plugins" class="panel-collapse collapse">
 							<div class="panel-body">
 								<ul class="nav navbar-nav">
-                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/plugins.php">كافة الإضافات</a></li>
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/plugins.php"><?php echo $lang['All Plugins']; ?></a></li>
 									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit-a-new-notification.php">إرسال إشعار جديد</a></li>
                   <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php">عرض كافة الإشعارات المرسلة</a></li>
                 </ul>
@@ -63,7 +68,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav <?php echo $lang['Margin']; ?> mt-2 mt-lg-0">
         <li class="nav-item active" title="<?php echo $lang['MainTitle'] ?>">
           <a class="nav-link" href="dashboard.php"><?php echo $lang['Main'] ?></a>
         </li>

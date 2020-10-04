@@ -13,15 +13,35 @@
         display: block;
     }
 </style>
-<div class="container m-0 p-0">
-    <div class="row m-0 p-0">
-        <div class="col-sm m-0 p-0">
-            <h3 class="inline"><?php echo $lang['PluginPageTitle'] ?></h3>  <button type="button" class="btn btn-secondary inline btn-sm"><?php echo $lang['PluginUpload'] ?></button>
-            <p class="block mt-2"><?php echo $lang['PluginPageDescription'] ?></p>
-        </div>
+            <div class="container p-0 m-0">
+    <br/>
+    <div class="row p-0 m-0">
+        <div class="col p-0 m-0">
+        <button type="button" class="btn btn-primary inline btn-sm"><?php echo $lang['PluginUpload'] ?></button>
+                    </div>
+                    </div>
+    <br/>
+	<div class="row justify-content-right">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center p-1 m-1 pr-3">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body mb-0"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col mr-3 ml-3">
+                                        <input type="search" placeholder="<?php echo $lang['Search For A Plugin'] ?>" class="form-control search-input form-control-lg form-control-borderless" data-table="plugins-list"/>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
     </div>
+                        <!--end of col-->
+    <br/>
 </div>
-<table class="table table-sm customers-list mt-3 text-right">
+<br/>
+<table class="table table-sm plugins-list mt-3 text-right">
     <thead>
         <tr>
           <th style="width: 2%;" class="text-right" scope="col"><input type="checkbox" id="select-all" class="ml-2" title="<?php echo $lang['PluginTableCheckboxTitle'] ?>"></th>
@@ -169,4 +189,45 @@ document.getElementById('select-all').onclick = function() {
   }
 }
 </script>
+<script>
+//Used to search a table
+        (function(document) {
+            'use strict';
+
+            var TableFilter = (function(myArray) {
+                var search_input;
+
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+        
+    </script>
 <?php include('../includes/php/footer.php'); ?>
