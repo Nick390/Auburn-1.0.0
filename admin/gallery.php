@@ -1,18 +1,19 @@
 <?php include('../includes/php/header.php'); ?>
 <?php include('../includes/php/nav.php'); ?>
-<?php include('../includes/source/function.php'); ?>
+<?php $mysqli = $conn; ?>
+
 <div class="container">
     <br/>
 	<div class="row justify-content-center">
                         <div class="col-12 col-md-10 col-lg-8">
                             <form class="card card-sm">
-                                <div class="card-body row no-gutters align-items-center">
+                                <div class="card-body row no-gutters align-items-center p-1 m-1 pr-3">
                                     <div class="col-auto">
                                         <i class="fas fa-search h4 text-body mb-0"></i>
                                     </div>
                                     <!--end of col-->
                                     <div class="col mr-3 ml-3">
-                                        <input type="search" placeholder="<?php echo $lang['Search For A File Using Its Name Or Format'] ?>" class="form-control search-input form-control-lg form-control-borderless" data-table="customers-list"/>
+                                        <input type="search" placeholder="<?php echo $lang['Search For A File Using Its Name Or Format'] ?>" class="form-control search-input form-control-lg form-control-borderless" data-table="gallery-list"/>
                                     </div>
                                     <!--end of col-->
                                 </div>
@@ -29,46 +30,54 @@
     <br/>
 </div>
 <br/>
-    
+<table class="table gallery-list">
+  <thead>
+    <tr>
+      <th class="border-bottom-0 align-middle"><input type="checkbox" id="select-all" class="ml-2" title="<?php echo $lang['Checkbox Title']?>"></th>
+      <th class="border-bottom-0"></th>
+      <th class="d-none d-sm-block border-bottom-0"><?php echo $lang['File']?></th>
+      <th class="border-bottom-0 align-middle"><?php echo $lang['URL']?></th>
+      <th class="d-none d-sm-block border-bottom-0"><?php echo $lang['Uplode Date']?></th>
+    </tr>
+  </thead>
+  <tbody>
 <?php
-                $query = "SELECT * FROM `add_a_new_branch` order by `id`";
-                 if(count(fetchAll($query))>0)
+//Display files from mysqli using php
+    $result = $mysqli->query("SELECT * FROM `uploadmultiplefiles` ORDER BY `UploadTimestamp` DESC") or die($mysqli->error);
 
-echo '<table class="table table-sm customers-list">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">رقم الفرع</th>
-          <th scope="col">الحي</th>
-          <th scope="col">المنطقة</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>';
-
-if ($result = $conn->query($query)) {
-    while ($row = $result->fetch_assoc()) {
-        $field1name = $row["ID"];
-        $field2name = $row["BranchNumber"];
-        $field3name = $row["Neighborhood"];
-        $field4name = $row["Region"];
-
-        echo ' <tr>
-                  <td>'.$field1name.'</td> 
-                  <td>'.$field2name.'</td> 
-                  <td>'.$field3name.'</td> 
-                  <td>'.$field4name.'</td>
-                  <td><a href="#"><button class="btn btn-sm btn-secondary">عرض ملفات الفرع</button></a></td>
-                </tr>
-                ';
-    }
-    echo'</tbody>
-         </table>';
-}else{
-  echo '<div class="alert alert-danger" role="alert">يوجد مشكلة في قاعدة البيانات</div>';
-}
+    while ($data = $result->fetch_assoc()){
 ?>
+
+
+
+    <tr>
+      <td style="width: 2%;" class="text-right"><input type="checkbox" class="form-check-input"></td>
+      <td><?php echo "<img class='border border-dark' src='{$data['imgdir']}' alt='{$data['filename']}' height='64px';
+    width='64px';>"; ?></td>
+      <td class="d-none d-sm-block"><?php echo "{$data['filename']}"; ?></td>
+      <td class="align-middle"><input type="text" value="<?php echo "$DB_HOST:8012/admin/{$data['imgdir']}"; ?>" class="next-input" style="width:100%;"></td>
+      <td class="d-none d-sm-block"><small class="text-muted"><?php echo "{$data['UploadTimestamp']}"; ?></small></td>
+    </tr>
+  
+    <?php 
+    }
+
+?>
+</tbody>
+</table>
+
+<script>
+//Used to select-all by checing the checkbox at the to of the table
+document.getElementById('select-all').onclick = function() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
+</script>
+
     <script>
+//Used to search a table
         (function(document) {
             'use strict';
 
@@ -106,5 +115,6 @@ if ($result = $conn->query($query)) {
             });
 
         })(document);
+        
     </script>
 <?php include('../includes/php/footer.php'); ?>

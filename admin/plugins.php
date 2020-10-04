@@ -1,6 +1,5 @@
 <?php include('../includes/php/header.php'); ?>
 <?php include('../includes/php/nav.php'); ?>
-<?php include_once '../includes/source/function.php';?>
 <!--هذه الصفحة مجرد شكل فقط ولكن تحتاج إلى عنصر echo من أجل ربطها في نظام الترجمة-->
 <style>
     #medialogo{

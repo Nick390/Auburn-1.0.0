@@ -42,7 +42,7 @@
                 "PluginPageTitle" => "Plugins",
                 "PluginUpload" => "Upload Plugin",
                 "PluginPageDescription" => "On this page you will find all the Plugins on the site",
-                "PluginTableCheckboxTitle" => "",
+                "PluginTableCheckboxTitle" => "Click to select all items",
                 "PluginTableTitle" => "Plugin",
                 "PluginTableDescription" => "Description",
                 "PluginEditButton" => "Edit",
@@ -52,6 +52,10 @@
                  //Super Admin page; Gallery Section
                 "Upload New File Button" => "Upload New File",
                 "Search For A File Using Its Name Or Format" => "Search for a file using it's name or format",
+                "File" => "File Name",
+                "URL" => "URL",
+                "Uplode Date" => "Uplode Dat",
+                "Checkbox Title" => "Click to select all items",
                 //Super Admin page; Gallery Section Upload Multiple Files page
                 "UploadButton" => "Upload",
                 "Page Title" => "Upload one or more files",

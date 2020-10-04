@@ -1,14 +1,15 @@
 <?php include('../includes/php/header.php'); ?>
 <?php include('../includes/php/nav.php'); ?>
+<?php $mysqli = $conn; ?>
 <div class="container m-0 p-0">
-<div class="row m-0 p-0">
+        <div class="row m-0 p-0">
         <div class="col-sm m-0 p-0">
-<h3><?php echo $lang['Page Title']?></h3>
+        <h3><?php echo $lang['Page Title']?></h3>
 		<p><?php echo $lang['Page Info']?></p>
-    <form action="" method="POST" enctype="multipart/form-data">
-        <input type="file" name="userfile[]" value="" multiple="">
-        <button type="submit" name="submit" class="btn btn-primary"><?php echo $lang['UploadButton'] ?></button>
-    </form>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" name="userfile[]" value="" multiple="">
+            <button type="submit" name="submit" class="btn btn-primary"><?php echo $lang['UploadButton'] ?></button>
+        </form>
     </div>
         </div>
         <div class="row m-0 p-0 mt-3">
@@ -38,8 +39,12 @@
     </div>
 <?php
             } else {
-                $extensions = array('jpg','png','gif','jpeg');
+                //Extensions that you allowed
+                $extensions = array('jpg','png','gif','jpeg','svg','webp','exe','pdf','doc','csv','xlsx','mp3','mp4','rar','zip','ico');
+
                 $file_ext = explode('.',$file_array[$i]['name']);
+                //The name fo the file
+                $name = $file_ext[0];
                 $file_ext = end($file_ext);
                 
                 if(!in_array($file_ext, $extensions)){
@@ -51,7 +56,12 @@
     </div>
 <?php
                 } else {
-                    move_uploaded_file($file_array[$i]['tmp_name'], "files/".$file_array[$i]['name']);
+                    $img_dir = "files/".$file_array[$i]['name'];
+                    move_uploaded_file($file_array[$i]['tmp_name'], $img_dir);
+                    
+                    $sql ="INSERT IGNORE INTO `uploadmultiplefiles` (`id`, `filename`, `imgdir`, `UploadTimestamp`) VALUES (NULL, '$name', '$img_dir', CURRENT_TIMESTAMP);";
+                    $mysqli->query($sql) or die($mysqli->error);
+
     ?><div class="alert alert-success alert-dismissible fade show" role="alert">
     <?php echo $file_array[$i]['name'].' - '.$phpFileUploadErrors[$file_array[$i]['error']]; ?>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">

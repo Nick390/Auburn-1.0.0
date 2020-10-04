@@ -1,6 +1,5 @@
 <?php include('../includes/php/header.php'); ?>
 <?php include('../includes/php/nav.php'); ?>
-<?php include("../includes/source/function.php"); ?>
 <style>
 #cke_message{
 	display: block;

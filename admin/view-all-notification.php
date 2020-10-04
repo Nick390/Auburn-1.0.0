@@ -1,6 +1,6 @@
 <?php include '../includes/php/header.php'; ?>
 <?php include '../includes/php/nav.php'; ?>
-<?php include_once '../includes/source/function.php'; ?>
+
 <div class="container m-0 p-0">
     <div class="row m-0 p-0">
         <div class="col-sm m-0 p-0">

@@ -1,74 +1,89 @@
 <?php include('../includes/php/header.php'); ?>
 <?php include('../includes/php/nav.php'); ?>
-<?php include_once '../includes/source/function.php';?>
-<div class="container m-0 p-0">
-    <div class="row m-0 p-0">
-        <div class="col-sm m-0 p-0">
+<style>
+</style>
+<div class="container">
+    <br/>
+    <div class="row">
+        <div class="col-sm">
             <h3>حسابات المستخدمين</h3>
             <p>في هذه الصفحة ستجد كافة المعلومات عن كافة المستخدمين</p>
         </div>
     </div>
-</div>
-<div class="container">
     <br/>
-	<div class="row justify-content-center">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <form class="card card-sm">
-                                <div class="card-body row no-gutters align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fas fa-search h4 text-body mb-0"></i>
-                                    </div>
-                                    <!--end of col-->
-                                    <div class="col mr-3 ml-3">
-                                        <input type="search" placeholder="إبحث عن رقم فرع، حي، منطقة..." class="form-control search-input form-control-lg form-control-borderless" data-table="customers-list"/>
-                                    </div>
-                                    <!--end of col-->
-                                </div>
-                            </form>
-                        </div>
-                        <!--end of col-->
+	<div class="row">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm">
+                <div class="card-body row no-gutters align-items-center p-1 m-1 pr-3">
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body mb-0"></i>
                     </div>
-</div>
-
+                        <!--end of col-->
+                    <div class="col mr-3 ml-3">
+                        <input type="search" placeholder="<?php echo $lang['Search For A File Using Its Name Or Format'] ?>" class="form-control search-input form-control-lg form-control-borderless" data-table="gallery-list"/>
+                    </div>
+                                    <!--end of col-->
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col">
 <?php
                 $query = "SELECT * FROM `users` order by `user_id`";
-                 if(count(fetchAll($query))>0)
-
-echo '<table class="table table-sm customers-list mt-3">
+                $getusersinfo = $conn->query($query);
+                 if($getusersinfo){
+?>
+<table class="table customers-list">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">إسم المستخدم</th>
-          <th scope="col">كلمة المرور</th>
-          <th scope="col">البريد الإلكتروني</th>
-          <th scope="col">تاريخ ووقت إنشاء الحساب</th>
+          <th class="border-bottom-0 align-middle"><input type="checkbox" id="select-all" class="ml-2"></th>
+          <th class="border-bottom-0 align-middle">#</th>
+          <th class="border-bottom-0 align-middle">إسم المستخدم</th>
+          <th class="align-middle d-none d-sm-block border-bottom-0">البريد الإلكتروني</th>
+          <th class="border-bottom-0 align-middle">تاريخ ووقت إنشاء الحساب</th>
         </tr>
       </thead>
-      <tbody>';
-
+      <tbody>
+<?php
 if ($result = $conn->query($query)) {
     while ($row = $result->fetch_assoc()) {
         $field1name = $row["user_id"];
         $field2name = $row["user_name"];
-        $field3name = $row["user_password_hash"];
         $field4name = $row["user_email"];
         $field5name = $row["user_date_created"];
 
         echo ' <tr>
+                  <td><input type="checkbox" id="select-all" class="ml-2"></td>
                   <td>'.$field1name.'</td> 
                   <td>'.$field2name.'</td> 
-                  <td>'.$field3name.'</td> 
-                  <td>'.$field4name.'</td>
+                  <td class="d-none d-sm-block">'.$field4name.'</td>
                   <td>'.$field5name.'</td>
                 </tr>
                 ';
     }
-    echo'</tbody>
-         </table>';
+?>
+    </tbody>
+    </table>
+<?php
 }else{
   echo '<div class="alert alert-danger" role="alert">يوجد مشكلة في قاعدة البيانات</div>';
 }
+}
 ?>
+</div>
+    </div>
+    </div>
+    <script>
+        //Used to select-all by checing the checkbox at the to of the table
+        document.getElementById('select-all').onclick = function() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var checkbox of checkboxes) {
+            checkbox.checked = this.checked;
+        }
+        }
+    </script>
     <script>
         (function(document) {
             'use strict';

@@ -1,6 +1,5 @@
 <?php include '../includes/php/header.php'; ?>
 <?php include '../includes/php/nav.php'; ?>
-<?php include_once '../includes/source/function.php'; ?>
 
 <div class="container m-0 p-0">
 <div class="row m-0 p-0">
@@ -15,10 +14,11 @@
 <?php
 $id = $_GET['id'];
 $query = "UPDATE `notifications` SET `status` = 'read' WHERE `id` = $id;";
-performQuery($query);
+
 $query = "SELECT * from `notifications` where `id` = '$id';";
-if (count(fetchAll($query)) > 0) {
-    foreach (fetchAll($query) as $i) {
+$wrok = $conn->query($query);
+if ($wrok) {
+    foreach (($wrok) as $i) {
         if ($i['type'] == 'معلومة') {
             echo '
             <div class="table-responsive">
