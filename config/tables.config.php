@@ -51,15 +51,24 @@ $Versions = "";
 
 $CommercialRecords = "";
 $Users = "CREATE TABLE `users` (
-   `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
-   `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
-   `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
-   `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique',
-   `user_date_created` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s date and time created',
-   PRIMARY KEY (`user_id`),
-   UNIQUE KEY `user_name` (`user_name`),
-   UNIQUE KEY `user_email` (`user_email`)
-  ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data'";
+ `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
+ `user_first_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_first_name,not unique',
+ `user_last_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_last_name,not unique',
+ `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
+ `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
+ `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique',
+ `user_address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_address,not unique',
+ `user_address2` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_address2,not unique',
+ `user_city` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_city,not unique',
+ `user_state` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_state,not unique',
+ `user_zip_code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_zip_code,not unique',
+ `user_birthday` date NOT NULL COMMENT 'user_birthday,not unique',
+ `user_role` varchar(60) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user_role,not unique',
+ `user_date_created` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s date and time created',
+ PRIMARY KEY (`user_id`),
+ UNIQUE KEY `user_name` (`user_name`),
+ UNIQUE KEY `user_email` (`user_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data'";
   
 $ValidityOfLicenses = "";
 $BranchFilesAndUploadAndUpdate = "";

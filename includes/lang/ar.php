@@ -85,5 +85,7 @@
                 "E-mail" => "البريد الإلكتروني",
                 "Account Date Creation" => "تاريخ ووقت إنشاء الحساب",
                 "Add New User Button" => "إضافة مستخدم جديد",
+                "Add New User Title" => "إضافة مستخدم جديد",
+                "Add New User Title Description" => "إضافة مستخدم جديد إلى هذا الموقع",
                 );
 ?>

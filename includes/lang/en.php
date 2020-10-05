@@ -85,5 +85,7 @@
                 "E-mail" => "E-mail",
                 "Account Date Creation" => "Account Date Creation",
                 "Add New User Button" => "Add New Use",
+                "Add New User Title" => "Add New User",
+                "Add New User Title Description" => "Add new user to this site",
                 );
 ?>
