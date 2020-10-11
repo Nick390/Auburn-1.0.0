@@ -87,5 +87,20 @@
                 "Add New User Button" => "إضافة مستخدم جديد",
                 "Add New User Title" => "إضافة مستخدم جديد",
                 "Add New User Title Description" => "إضافة مستخدم جديد إلى هذا الموقع",
+                //صفحة المشرف المميز، قسم الإعدادات
+                "Settings" => "الإعدادات",
+                "The last update was made in" => "تم اخر تعديل في",
+                "Site Name" => "اسم الموقع",
+                "Meta Site" => "ميتا الموقع",
+                "Site icon" => "ايقونة الموقع",
+                "Site language" => "لغة الموقع",
+                "Admin page language" => "لغة صفحة الأدمن",
+                "Admin username" => "اسم المستخدم للأدمن",
+                "Password for admin" => "كلمة المرور للأدمن",
+                "TimeZone" => "منطقة الوقت",
+                "Header for all user pages" => "الهدير لكل صفحات المستخدمين",
+                "Edit" => "تعديل",
+                "The data has been updated" => "تم تحديث البيانات",
+                "Unexpected error" => "خطئ غير متوقع",
                 );
 ?>

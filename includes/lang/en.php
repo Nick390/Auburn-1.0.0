@@ -87,5 +87,20 @@
                 "Add New User Button" => "Add New Use",
                 "Add New User Title" => "Add New User",
                 "Add New User Title Description" => "Add new user to this site",
+                //Super Admin page; Settings Section
+                "Settings" => "Settings",
+                "The last update was made in" => "The last update was made in",
+                "Site Name" => "Site Name",
+                "Meta Site" => "Meta Site",
+                "Site icon" => "Site icon",
+                "Site language" => "Site language",
+                "Admin page language" => "Admin page language",
+                "Admin username" => "Admin username",
+                "Password for admin" => "Password for admin",
+                "TimeZone" => "TimeZone",
+                "Header for all user pages" => "Header for all user pages",
+                "Edit" => "Edit",
+                "The data has been updated" => "The data has been updated",
+                "Unexpected error" => "Unexpected error",
                 );
 ?>

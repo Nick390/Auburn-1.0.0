@@ -4,16 +4,19 @@ include_once '../includes/source/session.php';
 require_once '../includes/source/dp_connect.php';
 include_once '../includes/source/function.php';
 
+$result = $conn->query("SELECT * FROM `settings`") or die($conn->error);
+$data = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="ar">  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>بوابة العلاقات الحكومية</title>
+    <title><?php echo "{$data['website_title']}"; ?></title>
     <link rel="stylesheet" href="/style/bootstrap.min.css">
     <link rel="stylesheet" href="/style/css/all.min.css">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo "{$data['website_favicon']}"; ?>" />
+    <?php echo "{$data['website_header']}"; ?>
     <style>
         *{
             direction: rtl;

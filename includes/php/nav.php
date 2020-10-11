@@ -19,7 +19,7 @@
   
   <div class="list-group list-group-flush" >
     <a href="/admin/dashboard.php" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['ControlpanelTitle'] ?>"><i class="fas fa-tachometer-alt"></i> <?php echo $lang['Controlpanel'] ?></a>
-    <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['SettingsTitle'] ?>"> <i class="fas fa-cogs"></i> <?php echo $lang['Settings'] ?></a>
+    <a href="/admin/settings.php" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['SettingsTitle'] ?>"> <i class="fas fa-cogs"></i> <?php echo $lang['Settings'] ?></a>
     <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['PagesTitle'] ?>"><i class="fas fa-clone"></i> <?php echo $lang['Pages'] ?></a>
     <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['ThemesTitle'] ?>"><i class="fas fa-pencil-ruler"></i> <?php echo $lang['Themes'] ?></a>
     <a class="list-group-item list-group-item-action bg-light" data-toggle="collapse" href="#dropdown-Gallery"   title="<?php echo $lang['GalleryTitle'] ?>"><i class="fas fa-photo-video"></i> <?php echo $lang['Gallery'] ?>
