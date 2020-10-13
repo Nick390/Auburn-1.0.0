@@ -46,7 +46,7 @@ if (isset($registration)) {
 
     <!-- the user name input field uses a HTML5 pattern check -->
     <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
     <label>الخانات التي تحتوي على <p class="text-danger d-inline">*</p> هي خانات إجبارية يجب تعبئتها</label>
     </div>
     </div>
