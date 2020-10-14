@@ -49,6 +49,23 @@ $Groups = "";
 
 $Versions = "";
 
+
+$Settings = "CREATE TABLE `settings` (
+   `website_id` int(11) NOT NULL AUTO_INCREMENT,
+   `website_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_meta` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_favicon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_login_icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_user_language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_admin_user` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_admin_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_timezone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `website_header` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+   `website_modified_date` timestamp NOT NULL DEFAULT current_timestamp(),
+   PRIMARY KEY (`website_id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='settings data'";
+
 $CommercialRecords = "";
 $Users = "CREATE TABLE `users` (
  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
@@ -61,7 +78,7 @@ $Users = "CREATE TABLE `users` (
  `user_address2` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_address2,not unique',
  `user_city` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_city,not unique',
  `user_state` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_state,not unique',
- `user_zip_code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'user_zip_code,not unique',
+ `user_zip_code` varchar(255) COLLATE utf8_unicode_ci  DEFAULT NULL COMMENT 'user_zip_code,not unique',
  `user_birthday` date NOT NULL COMMENT 'user_birthday,not unique',
  `user_role` varchar(60) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user_role,not unique',
  `user_date_created` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s date and time created',
