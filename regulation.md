@@ -9,6 +9,7 @@ for a process push to github and the commit that have been written.
 * **Delete** When a file is deleted.
 * **Remove** When removing a property from an existing file.
 * **Fix** When a bug of code is fixed or a property is fixed.
+* **Change** When file location change to another location.
 
 ---
 #### How is the title chosen?
