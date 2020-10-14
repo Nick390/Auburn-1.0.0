@@ -1,16 +1,22 @@
+<?php
+require_once 'includes/source/dp_connect.php';
+
+$result = $conn->query("SELECT * FROM `settings`") or die($conn->error);
+$data = $result->fetch_assoc();
+?>
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>تسجيل الدخول - بوابة العلاقات الحكومية</title>
+  <title><?php echo "{$data['website_title']}"; ?> - تسجيل الدخول</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="shortcut icon" type="image/png" href="/admin/files/favicon.ico" />
+  <link rel="shortcut icon" type="image/png" href="<?php echo "{$data['website_favicon']}"; ?>" />
   <link rel="stylesheet" href="/style/login.css">
 </head>
 <body class="text-center">
     <!-- login form box -->
   <form method="post" action="index.php" name="loginform" class="form-signin" autocomplete="off">
 
-      <img class="mb-4" src="/admin/files/logo.svg" alt="" width="72" height="72">
+      <img class="mb-4" src="<?php echo "{$data['website_login_icon']}"; ?>" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">الرجاء تسجيل الدخول</h1>
       <?php
 // show potential errors / feedback (from login object)

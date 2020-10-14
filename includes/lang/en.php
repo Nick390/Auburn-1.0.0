@@ -93,6 +93,7 @@
                 "Site Name" => "Site Name",
                 "Meta Site" => "Meta Site",
                 "Site icon" => "Site icon",
+                "Login icon" => "Login icon",
                 "Site language" => "Site language",
                 "Admin page language" => "Admin page language",
                 "Admin username" => "Admin username",

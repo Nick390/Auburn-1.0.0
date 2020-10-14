@@ -93,6 +93,7 @@
                 "Site Name" => "اسم الموقع",
                 "Meta Site" => "ميتا الموقع",
                 "Site icon" => "ايقونة الموقع",
+                "Login icon" => "ايقونة تسجيل الدخول",
                 "Site language" => "لغة الموقع",
                 "Admin page language" => "لغة صفحة الأدمن",
                 "Admin username" => "اسم المستخدم للأدمن",
