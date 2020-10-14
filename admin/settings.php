@@ -17,6 +17,7 @@ if(isset($_POST['submit'])){
 $update = "UPDATE `settings` SET `website_title` = '$_POST[website_title]' , 
  `website_meta` = '$_POST[website_meta]' ,
  `website_favicon` = '$_POST[website_favicon]' ,
+ `website_login_icon` = '$_POST[website_login_icon]',
  `website_language` = '$_POST[website_language]' ,
  `website_user_language` = '$_POST[website_user_language]' ,
  `website_admin_user` = '$_POST[website_admin_user]' ,
@@ -62,6 +63,14 @@ $update_date = mysqli_query($conn, $update);
                 <input type="text" class="form-control" id="website_favicon" name="website_favicon" value="<?php echo "{$data['website_favicon']}"; ?>">
                 </div>
             </div>
+
+            <div class="form-group row">
+                <label for="website_login_icon" class="col-sm-2 col-form-label"><?php echo $lang['Login icon']; ?></label>
+                <div class="col-sm-5">
+                <input type="text" class="form-control" id="website_Login_icon" name="website_login_icon" value="<?php echo "{$data['website_login_icon']}"; ?>">
+                </div>
+            </div>
+
             <div class="form-group row">
                 <label for="website_language" class="col-sm-2 col-form-label"><?php echo $lang['Site language']; ?></label>
                 <div class="col-sm-2">
