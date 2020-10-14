@@ -41,7 +41,8 @@
                 "lang_enTitle" => "English",
                 "lang_arTitle" => "العربية",
                 "langTitle" => "Change Language",
-                "AdminThemeTitle" => "Change to dark mode",
+                "AdminThemeTitle" => "Dark mode / Normal mode",
+                "Dark Mode Switch" => "ON / OFF",
                 "NavbarTogglerTitle" => "Toggle navigation bar mode",
                 "LogoTitle" => "Auburn home page",
                 //Super Admin page; Plugins Section

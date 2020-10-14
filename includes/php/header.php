@@ -107,6 +107,7 @@ $data = $result->fetch_assoc();
       background:no-repeat center center rgba(0,0,0,0.25);
     }
 </style>
+    <link rel="stylesheet" href="/style/dark-mode.css">
 </head>
 <body>
 <!--spinner-grow-->

@@ -41,7 +41,8 @@
                 "lang_enTitle" => "English",
                 "lang_arTitle" => "العربية",
                 "langTitle" => "تغيير اللغة",
-                "AdminThemeTitle" => "تغيير إلى الوضع المظلم",
+                "AdminThemeTitle" => "الوضع المظلم/الوضع العادي",
+                "Dark Mode Switch" => "تشغيل/ إيقاف",
                 "NavbarTogglerTitle" => "تبديل وضع شريط التنقل",
                 "LogoTitle" => "صفحة Auburn الرئيسية",
                 //صفحة المشرف قسم الإضافات

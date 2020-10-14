@@ -11,7 +11,7 @@
 
 <div class="bg-light border-right navbar-light" id="sidebar-wrapper">
   <div class="sidebar-heading">
-    <a class="navbar-brand" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">
+    <a class="navbar-brand text-dark" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">
     <img src="../admin/files/logo.svg" width="30" height="30" class="d-inline-block align-top" loading="lazy">
     Auburn 
   </a>
@@ -60,11 +60,11 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button type="button" class="btn" id="menu-toggle" title="<?php echo $lang['NavbarTogglerTitle'] ?>">
-  <span class="navbar-toggler-icon" id="menu-toggle"></span>
+  <span class="fas fa-bars" id="menu-toggle"></span>
   </button>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="fas fa-bars"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -75,9 +75,20 @@
         <li class="nav-item active" title="<?php echo $lang['ViewTheSiteTitle'] ?>">
           <a class="nav-link" href="../pages/dashboard.php" target="_blank"><?php echo $lang['ViewTheSite'] ?></a>
         </li>
-        <li class="nav-item active" title="<?php echo $lang['AdminThemeTitle'] ?>">
-          <a class="nav-link" href="#"><i class="fas fa-adjust"></i></a>
+
+
+        <li class="nav-item dropdown active" title="<?php echo $lang['AdminThemeTitle'] ?>">
+          <a class="nav-link ropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-adjust"></i></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="custom-control custom-switch d-flex justify-content-center" aria-labelledby="navbarDropdown">
+          <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+          <label class="custom-control-label" for="darkSwitch"><?php echo $lang['Dark Mode Switch'] ?></label>
+          <script src="/scripts/theme_switcher.js"></script>
+        </div>
+        </div>
         </li>
+
+
         <li class="nav-item dropdown active" title="<?php echo $lang['langTitle'] ?>">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-language"></i>
