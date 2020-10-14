@@ -1,0 +1,50 @@
+[data-theme="dark"] {
+    background-color: #343a40!important;
+    color: #fff;
+  }
+[data-theme="dark"] .bg-light {
+    background-color: #343a40 !important;
+    color: #fff;
+  }
+  
+[data-theme="dark"] .bg-white {
+    background-color: #343a40 !important;
+    color: #fff;
+  }
+[data-theme="dark"]
+  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-lin {
+    color: #fff;
+  }
+
+[data-theme="dark"] .fas {
+    color: #fff;
+  }
+[data-theme="dark"] .dropdown-item {
+    background-color: #343a40 !important;
+    color: #fff;
+  }
+[data-theme="dark"] .dropdown-menu {
+    background-color: #343a40 !important;
+    color: #fff;
+  }
+
+[data-theme="dark"] .table {
+    color: #fff;
+  }
+
+[data-theme="dark"] a.bg-light:focus, a.bg-light:hover, button.bg-light:focus, button.bg-light:hover {
+    background-color: #6c757d!important;
+}
+[data-theme="dark"] .text-dark{
+  color: #fff !important;
+}
+
+[data-theme="dark"] .border-right{
+  border-right: 1px solid #343a40!important;
+}
+
+[data-theme="dark"] .dropdown-item:focus, .dropdown-item:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #6c757d!important;
+}
