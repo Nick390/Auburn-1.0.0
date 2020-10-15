@@ -51,7 +51,7 @@ if (isset($login)) {
              </label>
           </div>
           <div class="col">
-            <label><a href="/pages/forgot-your-password.php">نسيت كلمة المرور؟</a></label>
+            <label><a href="/pages/form_forgot_your_password.php">نسيت كلمة المرور؟</a></label>
           </div>
         </div>
       </div>
