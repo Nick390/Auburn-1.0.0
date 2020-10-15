@@ -24,15 +24,17 @@ It is an open source content management system or CMS.
 Please review the license.md file.
 
 ##### Other licenses
-Please review the license file.
+Please review the license folder.
 
 ##### The internal structure of the files
 
 <div align="center">
+       <a href="https://lh4.googleusercontent.com/qjNAq6CL1O0ycfzHOGL-46CEj_0PX2J11HGJQb2PrTMp0Lf4WAsW5W5fM_JzQnkaBdA4XeeLzBnklkYYLHDM=w1366-h661">
         <img
             alt="PHP"
             src="https://lh4.googleusercontent.com/qjNAq6CL1O0ycfzHOGL-46CEj_0PX2J11HGJQb2PrTMp0Lf4WAsW5W5fM_JzQnkaBdA4XeeLzBnklkYYLHDM=w1366-h661"
             >
+        </a>
 </div>
 
 ---
@@ -42,9 +44,6 @@ Please review the license file.
 * Provide the minimum requirements.
 * Create Database: `mydb` or Create your own database and add it in the following files `includes/source/db.php` & `includes/source/dp_connect.php` & `includes/source/function.php`.
 * Clone or download.
-* Go to File `config/tables.config.php` and execute all databases manually.
-* Create an account.
-* You are ready to use the system.
 ``` 
 https://github.com/Nick390/Auburn-1.0.0.git
 
@@ -52,8 +51,10 @@ git@github.com:Nick390/Auburn-1.0.0.git
 ```
 * Extract the files to main directory.
 * Delete zip file if it's there. 
-* Navigate to `includes/source/dp_connect.php` change the username and the password to what did you put in mysql and save the file.
-* Now go to the mean page in the login form username is "root" password is "root" and after you login you can change everything.
+* Go to File `config/tables.config.php` and execute all tables manually.
+* Navigate to `includes/source/db.php` & `includes/source/dp_connect.php` & `includes/source/function.php` change the username and the password to what did you put in mysql and save the file.
+* Now go to the mean page in the login form create an account then login using that account.
+* You are ready to use the system.
 ---
 
 ###### Good Luck
