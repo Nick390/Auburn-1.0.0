@@ -28,37 +28,12 @@ Please review the license file.
 
 ##### The internal structure of the files
 
-Auburn/ <br/>
-├───admin <br/>
-│   └───files <br/>
-├───ckeditor <br/>
-│   ├───adapters <br/>
-│   ├───lang <br/>
-│   ├───plugins <br/>
-│   │   ├───dialog <br/>
-│   │   │   └───styles <br/>
-│   │   └───link <br/>
-│   │       ├───dialogs <br/>
-│   │       └───images <br/>
-│   │           └───hidpi <br/>
-│   ├───skins <br/>
-│   │   └───moono-lisa <br/>
-│   │       └───images <br/>
-│   │           └───hidpi <br/>
-│   └───vendor <br/>
-├───config <br/>
-├───includes <br/>
-│   ├───lang <br/>
-│   ├───librarie <br/>
-│   ├───php <br/>
-│   ├───plugins <br/>
-│   └───source <br/>
-├───licenses <br/>
-├───pages <br/>
-├───scripts <br/>
-└───style <br/>
-    ├───css <br/>
-    └───webfonts <br/>
+<div align="center">
+        <img
+            alt="PHP"
+            src="https://lh4.googleusercontent.com/qjNAq6CL1O0ycfzHOGL-46CEj_0PX2J11HGJQb2PrTMp0Lf4WAsW5W5fM_JzQnkaBdA4XeeLzBnklkYYLHDM=w1366-h661"
+            >
+</div>
 
 ---
 #### How to use?
