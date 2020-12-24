@@ -86,7 +86,17 @@ $Users = "CREATE TABLE `users` (
  UNIQUE KEY `user_name` (`user_name`),
  UNIQUE KEY `user_email` (`user_email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data'";
-  
+
+	
+$posts ="CREATE TABLE `posts` (
+   `id` int(6) NOT NULL AUTO_INCREMENT,
+   `title` varchar(255) NOT NULL,
+   `content` varchar(500) NOT NULL,
+   `tags` varchar(255) NOT NULL,
+   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+   PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4";
+
 $ValidityOfLicenses = "";
 $BranchFilesAndUploadAndUpdate = "";
 
