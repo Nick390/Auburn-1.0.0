@@ -41,7 +41,8 @@
                 "lang_enTitle" => "English",
                 "lang_arTitle" => "العربية",
                 "langTitle" => "تغيير اللغة",
-                "AdminThemeTitle" => "تغيير إلى الوضع المظلم",
+                "AdminThemeTitle" => "الوضع المظلم/الوضع العادي",
+                "Dark Mode Switch" => "تشغيل/ إيقاف",
                 "NavbarTogglerTitle" => "تبديل وضع شريط التنقل",
                 "LogoTitle" => "صفحة Auburn الرئيسية",
                 //صفحة المشرف قسم الإضافات
@@ -103,5 +104,16 @@
                 "Edit" => "تعديل",
                 "The data has been updated" => "تم تحديث البيانات",
                 "Unexpected error" => "خطئ غير متوقع",
+                // صفحة المشرف المميز، قسم المنشورات
+                "Posts title" => "الموضوع",
+                "Posts url" => "الرابط",
+                "Posts content" => "المقال",
+                "Posts thumbnail" => "تحميل صورة مصغرة",
+                "Posts tags" => "الوسوم",
+                "All posts" => "كافة المقالات",
+                "Submit posts" => "نشر مقال جديد",
+                "Posts info" => "اكتب بين كل وسم والأخر علامة فاصلة ','",
+                "Posts button submit" => "نشر",
+                "Posts button cancel" => "إلغاء",
                 );
 ?>

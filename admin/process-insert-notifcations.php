@@ -2,7 +2,7 @@
 include_once '../includes/source/dp_connect.php';
 include_once '../includes/source/session.php';
 
-//if delete button in /admin/submit-a-new-notification.php have been clicked
+//if submit button in /admin/submit-a-new-notification.php have been clicked
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $message = $_POST['message'];

@@ -106,7 +106,25 @@ $data = $result->fetch_assoc();
       z-index:9999;
       background:no-repeat center center rgba(0,0,0,0.25);
     }
+    #title{
+      width: 100%;
+    }
+    #tags{
+      width: 100%;
+    }
+    #cke_content{
+      width: 100%;
+      height: 300px;
+    }
+    #basic-url{
+      direction: ltr;
+      text-align: left;
+    }
+    #float-left{
+      float: left;
+    }
 </style>
+    <link rel="stylesheet" href="/style/dark-mode.css">
 </head>
 <body>
 <!--spinner-grow-->

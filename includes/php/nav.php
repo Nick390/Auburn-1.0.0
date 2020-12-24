@@ -1,4 +1,4 @@
-<?php if(!isset($_SESSION['user_name'])): header("location: logout.php");?>
+<?php if(!isset($_SESSION['user_name'])): header("location: /");?>
 
       <?php else: ?>
 
@@ -11,7 +11,7 @@
 
 <div class="bg-light border-right navbar-light" id="sidebar-wrapper">
   <div class="sidebar-heading">
-    <a class="navbar-brand" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">
+    <a class="navbar-brand text-dark" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">
     <img src="../admin/files/logo.svg" width="30" height="30" class="d-inline-block align-top" loading="lazy">
     Auburn 
   </a>
@@ -45,7 +45,17 @@
                 </ul>
               </div>
             </div>
-    <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['PostsTitle'] ?>"><i class="fas fa-newspaper"></i> <?php echo $lang['Posts'] ?></a>
+    <a class="list-group-item list-group-item-action bg-light" data-toggle="collapse" href="#dropdown-posts" title="<?php echo $lang['PostsTitle'] ?>"><i class="fas fa-newspaper"></i> <?php echo $lang['Posts'] ?> <i class="fas fa-caret-down"></i></a>
+    						<!-- Dropdown level 1 -->
+                <div id="dropdown-posts" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit_posts.php"><?php echo $lang['All posts']; ?></a></li>
+									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit_posts.php"><?php echo $lang['Submit posts']; ?></a></li>
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php">عرض كافة الإشعارات المرسلة</a></li>
+                </ul>
+              </div>
+            </div>
     <a href="/admin/users-dashboard.php" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['UsersTitle'] ?>"><i class="fas fa-users"></i> <?php echo $lang['Users'] ?></a>
     <a href="/admin/view-account.php" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['AccountTitle'] ?>"><i class="fas fa-id-card-alt"></i> <?php echo $lang['Account'] ?></a>
     <a href="#" class="list-group-item list-group-item-action bg-light" title="<?php echo $lang['UserGuideTitle'] ?>"><i class="fas fa-book"></i> <?php echo $lang['UserGuide'] ?></a>
@@ -60,11 +70,11 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button type="button" class="btn" id="menu-toggle" title="<?php echo $lang['NavbarTogglerTitle'] ?>">
-  <span class="navbar-toggler-icon" id="menu-toggle"></span>
+  <span class="fas fa-bars" id="menu-toggle"></span>
   </button>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="fas fa-bars"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -75,9 +85,20 @@
         <li class="nav-item active" title="<?php echo $lang['ViewTheSiteTitle'] ?>">
           <a class="nav-link" href="../pages/dashboard.php" target="_blank"><?php echo $lang['ViewTheSite'] ?></a>
         </li>
-        <li class="nav-item active" title="<?php echo $lang['AdminThemeTitle'] ?>">
-          <a class="nav-link" href="#"><i class="fas fa-adjust"></i></a>
+
+
+        <li class="nav-item dropdown active" title="<?php echo $lang['AdminThemeTitle'] ?>">
+          <a class="nav-link ropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-adjust"></i></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="custom-control custom-switch d-flex justify-content-center" aria-labelledby="navbarDropdown">
+          <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+          <label class="custom-control-label" for="darkSwitch"><?php echo $lang['Dark Mode Switch'] ?></label>
+          <script src="/scripts/theme_switcher.js"></script>
+        </div>
+        </div>
         </li>
+
+
         <li class="nav-item dropdown active" title="<?php echo $lang['langTitle'] ?>">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-language"></i>

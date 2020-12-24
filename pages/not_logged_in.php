@@ -4,11 +4,12 @@ require_once 'includes/source/dp_connect.php';
 $result = $conn->query("SELECT * FROM `settings`") or die($conn->error);
 $data = $result->fetch_assoc();
 ?>
-<html lang="en"><head>
+<html lang="ar">
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?php echo "{$data['website_title']}"; ?> - تسجيل الدخول</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style/bootstrap.min.css">
   <link rel="shortcut icon" type="image/png" href="<?php echo "{$data['website_favicon']}"; ?>" />
   <link rel="stylesheet" href="/style/login.css">
 </head>
@@ -51,7 +52,7 @@ if (isset($login)) {
              </label>
           </div>
           <div class="col">
-            <label><a href="/pages/form_forgot_your_password.php">نسيت كلمة المرور؟</a></label>
+            <label><a href="/pages/forgot-your-password.php">نسيت كلمة المرور؟</a></label>
           </div>
         </div>
       </div>
