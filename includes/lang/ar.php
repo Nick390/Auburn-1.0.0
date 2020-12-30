@@ -115,5 +115,11 @@
                 "Posts info" => "اكتب بين كل وسم والأخر علامة فاصلة ','",
                 "Posts button submit" => "نشر",
                 "Posts button cancel" => "إلغاء",
+                "Posts float" => "left",
+                "Display url input1" => "flex",
+                "Display url input2" => "none",
+                "Posts url label padding right" => ".25rem",
+                "Posts url label padding left" => "0",
+                "Posts author" => "المؤلف",
                 );
 ?>

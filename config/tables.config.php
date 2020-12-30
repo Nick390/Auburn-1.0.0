@@ -90,9 +90,11 @@ $Users = "CREATE TABLE `users` (
 	
 $posts ="CREATE TABLE `posts` (
    `id` int(6) NOT NULL AUTO_INCREMENT,
-   `title` varchar(255) NOT NULL,
-   `content` varchar(500) NOT NULL,
-   `tags` varchar(255) NOT NULL,
+   `posts_title` varchar(255) NOT NULL,
+   `posts_url` varchar(255) NOT NULL,00
+   `posts_content` varchar(500) NOT NULL,
+   `posts_thumbnail` varchar(255) NOT NULL,00
+   `posts_tags` varchar(255) NOT NULL,
    `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
    PRIMARY KEY (`id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4";

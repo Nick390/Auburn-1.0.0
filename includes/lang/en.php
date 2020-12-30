@@ -103,5 +103,22 @@
                 "Edit" => "Edit",
                 "The data has been updated" => "The data has been updated",
                 "Unexpected error" => "Unexpected error",
+                //Super Admin page; Posts Section
+                "Posts title" => "Title",
+                "Posts url" => "URL",
+                "Posts content" => "Content",
+                "Posts thumbnail" => "Upload thumbnail",
+                "Posts tags" => "Tags",
+                "All posts" => "All posts",
+                "Submit posts" => "Submit new post",
+                "Posts info" => "Write a comma between each tag and the other ','",
+                "Posts button submit" => "Submit",
+                "Posts button cancel" => "Cancel",
+                "Posts float" => "right",
+                "Display url input1" => "none",
+                "Display url input2" => "flex",
+                "Posts url label padding right" => "0",
+                "Posts url label padding left" => ".25rem",
+                "Posts author" => "Author",
                 );
 ?>

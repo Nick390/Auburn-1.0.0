@@ -20,29 +20,44 @@ unset($_SESSION['message']);
 </div>
 
 <?php endif ?>
+
     <form action="/admin/process_send_posts.php" method="post">
         <div class="form-row col-md-12">
             <div class="form-group col-md-12 mb-2">
-                <label for="title"><?php echo $lang['Posts title'] ?></label><br>
-                <input type="text" name="title" id="title">
+                <label for="posts_title" class="form-label"><?php echo $lang['Posts title'] ?></label><br>
+                <input type="text" name="posts_title" id="posts_title" class="form-control">
             </div>
-            <label for="basic-url" class="form-label"><?php echo $lang['Posts url'] ?></label>
-            <div class="input-group col-md-12 mb-2">
-                <input type="text" class="form-control" name="url" id="basic-url" aria-describedby="basic-addon3">
+            <label for="posts_url" class="form-label padding"><?php echo $lang['Posts url'] ?></label>
+            <div class="input-group col-md-12 mb-2" style="display:<?php echo $lang['Display url input1']; ?>;">
+                <input type="text" class="form-control" name="posts_url-1" id="posts_url" aria-describedby="basic-addon3">
                 <span class="input-group-text" id="basic-addon3"><?php echo "/$DB_HOST:8012/posts"; ?></span>
             </div>
+
+            <div class="input-group col-md-12 mb-2" style="display:<?php echo $lang['Display url input2']; ?>;">
+                <span class="input-group-text" id="basic-addon3"><?php echo "/$DB_HOST:8012/posts"; ?></span>
+                <input type="text" class="form-control" name="posts_url-2" id="posts_url" aria-describedby="basic-addon3">
+            </div>
+
             <div class="input-group col-md-12 mb-2">
-                <label for="content"><?php echo $lang['Posts content'] ?></label><br>
-                <textarea name="content" id="content" cols="auto" rows="auto"></textarea>
+                <label for="content" class="form-label"><?php echo $lang['Posts content'] ?></label><br>
+                <textarea name="posts_content" id="content" cols="auto" rows="auto"></textarea>
             </div>
             <div class="form-group col-md-12 mb-2">
-                <label for="posts-thumbnail"><?php echo $lang['Posts thumbnail'] ?></label>
-                <input type="file" class="text-center file-upload" name="posts-thumbnail" id="posts-thumbnail">
+                <label for="posts_thumbnail"><?php echo $lang['Posts thumbnail'] ?></label>
+                <input type="file" class="text-center file-upload" name="posts_thumbnail" id="posts_thumbnail">
             </div>
             <div class="form-group col-md-12 mb-2">
-                <label for="tags"><?php echo $lang['Posts tags'] ?></label><br>
+                <label for="posts_author"><?php echo $lang['Posts author'] ?></label>
+                <select class="form-select form-select-lg mb-3" name="posts_author" id="posts_author">
+                    <option selected>Alwaleed</option>
+                    <option>admin-user-2</option>
+                    <option>admin-user-3</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12 mb-2">
+                <label for="posts_tags" class="form-label"><?php echo $lang['Posts tags'] ?></label><br>
                 <p class="text-mute mb-0"><?php echo $lang['Posts info'] ?></p>
-                <input type="text" name="tags" id="tags">
+                <input type="text" name="posts_tags" id="posts_tags" class="form-control">
             </div>
             
             <div class="form-group col-md-12 mb-2">
@@ -58,6 +73,6 @@ unset($_SESSION['message']);
 </div>
 <script src="/ckeditor/ckeditor.js"></script>
 <script>
-	CKEDITOR.replace('content');
+	CKEDITOR.replace('posts_content');
 </script>
 <?php include('../includes/php/footer.php'); ?>

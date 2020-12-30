@@ -14,7 +14,7 @@ $data = $result->fetch_assoc();
     <title><?php echo "{$data['website_title']}"; ?></title>
     <link rel="stylesheet" href="/style/bootstrap.min.css">
     <link rel="stylesheet" href="/style/css/all.min.css">
-    <link rel="shortcut icon" type="image/png" href="/admin/files/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo "{$data['website_favicon']}"; ?>" />
 <style>
     *{
       direction: <?php echo $lang['Page Direction CSS direction']?>;
@@ -106,22 +106,51 @@ $data = $result->fetch_assoc();
       z-index:9999;
       background:no-repeat center center rgba(0,0,0,0.25);
     }
-    #title{
+    /* admin posts title*/
+    #posts_title{
       width: 100%;
     }
-    #tags{
+     /* admin posts tags*/
+    #posts_tags{
       width: 100%;
     }
+     /* admin posts js content*/
     #cke_content{
       width: 100%;
       height: 300px;
+      border-radius: 0.25rem;
     }
-    #basic-url{
+    .cke_editable{
+      text-align: left;
+      direction: ltr;
+    }
+     /* admin posts url*/
+    #posts_url{
       direction: ltr;
       text-align: left;
     }
+     /* admin button float*/
     #float-left{
-      float: left;
+      float: <?php echo $lang['Posts float']?>;
+    }
+    /* admin posts url */
+    .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+    .input-group-text {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: .25rem;
+      border-bottom-left-radius: .25rem;
+      text-align: left;
+      direction: rtl;
+    }
+    label.padding{
+      padding-left: <?php echo $lang['Posts url label padding left']?>;
+      padding-right: <?php echo $lang['Posts url label padding right']?>;
     }
 </style>
     <link rel="stylesheet" href="/style/dark-mode.css">
