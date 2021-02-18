@@ -2,6 +2,12 @@ These regulation were adopted to ensure the works does not mix in the future and
 for a process push to github and the commit that have been written.
 ---
 #### Definitions
+##### For Folders
+* **Create** Used when new folder has created.
+* **Rename** Used when a previously existing folder is renamed.
+* **Delete** When a folder is deleted.
+* **Change** When folder location change to another location.
+##### For Files
 * **Create** Used when something new that wasn't there before is created.
 * **Update** Used when an existing file is modified.
 * **Rename** Used when a previously existing file is renamed.
@@ -10,7 +16,7 @@ for a process push to github and the commit that have been written.
 * **Remove** When removing a property from an existing file.
 * **Fix** When a bug of code is fixed or a property is fixed.
 * **Change** When file location change to another location.
-
+* **Rreplace** When file replaced by other file and does same work.
 ---
 #### How is the title chosen?
 An address is chosen on the largest thing that has been done,for example writing a file consisting of 1000 lines of 
@@ -20,6 +26,9 @@ but when the (push origin) done you have to choose the trick is to make it accur
 #### In optional extended description
 Here you sail and go deeper into it. You must mention everything you have done, including that in the main title.
 You must put an asterisk`*`before each item and a point at the end of each item you have made.
+##### Examples
+* `**Add text coloring property.`
+* `**Fix Page not specified error.`
 
 #### additional information
 * Any modification less than 30 characters is preferable not to be (push origin).
