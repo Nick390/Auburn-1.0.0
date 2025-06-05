@@ -95,15 +95,15 @@ class Registration
                     $this->errors[] = "  عذرًا ، اسم المستخدم / عنوان البريد الإلكتروني هذا مستخدم بالفعل.";
                 } else {
                     // write new user's data into database
-                    $sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_date_created)
-                            VALUES('" . $user_name . "', '" . $user_password_hash . "', '" . $user_email . "', CURRENT_TIMESTAMP);";
+                    $sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_birthday, user_role, user_date_created)
+                            VALUES('" . $user_name . "', '" . $user_password_hash . "', '" . $user_email . "', '1990-01-01', 'user', '" . date('Y-m-d H:i:s') . "');";
                     $query_new_user_insert = $this->db_connection->query($sql);
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
                         $this->messages[] = "تم إنشاء حسابك بنجاح. يمكنك الآن تسجيل الدخول.";
                     } else {
-                        $this->errors[] = "عذرا ، فشل تسجيلك. الرجاء العودة والمحاولة مجددا.";
+                        $this->errors[] = "عذرا ، فشل تسجيلك. الرجاء العودة والمحاولة مجددا. خطأ: " . $this->db_connection->error;
                     }
                 }
             } else {

@@ -4,10 +4,10 @@
 <div class="container m-0 p-0">
 <div class="row m-0 p-0">
     <div class="col-sm m-0 p-0">
-        <h3>جميع الإشعارات التي تم إرسالها</h3>
-        <p>في هذه الصفحة ستجد كافة الإشعارات التي تم إرسالها لكافة المستخدمين</p>
-        <p><?php echo 'إشعار رقم ' . ($id = $_GET['id']); ?></p>
-        <p><a class="text-dark" href="/admin/view-all-notification.php"><i class="fas fa-arrow-alt-circle-right"></i> عد إلى الخلف</a></p>
+        <h3><?php echo $lang['All Sent Notifications']; ?></h3>
+        <p><?php echo $lang['All Sent Notifications Description']; ?></p>
+        <p><?php echo $lang['Notification Number'] . ' ' . ($id = $_GET['id']); ?></p>
+        <p><a class="text-dark" href="/admin/view-all-notification.php"><i class="fas fa-arrow-alt-circle-right"></i> <?php echo $lang['Go Back']; ?></a></p>
     </div>
 </div>
 </div>
@@ -19,16 +19,16 @@ $query = "SELECT * from `notifications` where `id` = '$id';";
 $wrok = $conn->query($query);
 if ($wrok) {
     foreach (($wrok) as $i) {
-        if ($i['type'] == 'معلومة') {
+        if ($i['type'] == 'معلومة' || $i['type'] == 'Information') {
             echo '
             <div class="table-responsive">
             <table class="table">
             <thead>
               <tr>
-              <th scope="col">المرسل</th>
-              <th scope="col">الوصف</th>
-              <th scope="col">الحدث</th>
-              <th scope="col">التاريخ</th>
+              <th scope="col">' . $lang['Sender'] . '</th>
+              <th scope="col">' . $lang['Description'] . '</th>
+              <th scope="col">' . $lang['Event'] . '</th>
+              <th scope="col">' . $lang['Date'] . '</th>
             </tr>
             <tbody>
             <tr>
@@ -52,10 +52,10 @@ if ($wrok) {
             <table class="table">
             <thead>
               <tr>
-              <th scope="col">المرسل</th>
-              <th scope="col">الحدث</th>
-              <th scope="col">التفاصيل</th>
-              <th scope="col">التاريخ والوقت</th>
+              <th scope="col">' . $lang['Sender'] . '</th>
+              <th scope="col">' . $lang['Event'] . '</th>
+              <th scope="col">' . $lang['Details'] . '</th>
+              <th scope="col">' . $lang['Date and Time'] . '</th>
             </tr>
             <tbody>
             <tr>

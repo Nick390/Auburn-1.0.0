@@ -7,7 +7,7 @@
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/">
+  <a class="navbar-brand" href="../index.php">
     <img src="/admin/files/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
       Auburn
   </a>
@@ -36,7 +36,7 @@
 				  <p class="m-0 p-0 notification-text"> الإشعارات</p>
 				</div>
 				<div class="col-sm">
-				  <a class="text-secondary notification-logo" href="/pages/account_notifications.php"><i class="fas fa-cog pr-2"></i></a>
+				  <a class="text-secondary notification-logo" href="account_notifications.php"><i class="fas fa-cog pr-2"></i></a>
 				</div>
             </div>
          </div>
@@ -53,7 +53,7 @@
                                 echo "font-weight:900; color:#17a2b8;";
                             }
                          ?>
-                         "class="dropdown-item text-right text-wrap" href="/pages/account_notifications_view.php?id=<?php echo $i['id'] ?>">
+                         "class="dropdown-item text-right text-wrap" href="account_notifications_view.php?id=<?php echo $i['id'] ?>">
                 <small><i><?php echo date('F j, Y, g:i a',strtotime($i['date'])) ?></i></small><br/>
                   <?php 
                 if($i['type']=='معلومة'){
@@ -88,11 +88,11 @@
            </span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/pages/All-branches.php"><i class="fas fa-store-alt"></i>
+          <a class="dropdown-item" href="All-branches.php"><i class="fas fa-store-alt"></i>
                   كافة الفروع</a>
           <a class="dropdown-item" href="#"><i class="fas fa-copy"></i>
                   السجلات التجارية </a>
-          <a class="dropdown-item" href="/pages/Validity-of-licenses.php"><i class="fas fa-clock"></i>
+          <a class="dropdown-item" href="Validity-of-licenses.php"><i class="fas fa-clock"></i>
                     صلاحية الرخص</a>
                     <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">
@@ -104,8 +104,11 @@
           <?php echo "مرحباً ".$_SESSION['user_name']?>
           </a>
           <div class="dropdown-menu ml-0 mr-0 pl-0 pr-0" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/pages/profile.php">الملف الشخصي</a>
-          <a class="dropdown-item" href="/index.php?logout">تسجيل الخروج<a/>
+          <a class="dropdown-item" href="profile.php">الملف الشخصي</a>
+          <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin' || (isset($_SESSION['user_name']) && $_SESSION['user_name'] === 'admin')): ?>
+            <a class="dropdown-item" href="/admin/dashboard.php">لوحة تحكم الإدارة</a>
+          <?php endif; ?>
+          <a class="dropdown-item" href="../index.php?logout">تسجيل الخروج<a/>
           </div>
         </li>
     </ul>

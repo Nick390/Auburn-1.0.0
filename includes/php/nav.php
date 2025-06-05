@@ -1,4 +1,6 @@
-<?php if(!isset($_SESSION['user_name'])): header("location: /");?>
+<?php
+include_once __DIR__ . '/../source/session.php';
+if(!isset($_SESSION['user_name'])): header("location: /");?>
 
       <?php else: ?>
 
@@ -12,7 +14,7 @@
 <div class="bg-light border-right navbar-light" id="sidebar-wrapper">
   <div class="sidebar-heading">
     <a class="navbar-brand text-dark" href="/admin/dashboard.php" title="<?php echo $lang['LogoTitle'] ?>">
-    <img src="../admin/files/logo.svg" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+    <img src="/admin/files/logo.svg" width="30" height="30" class="d-inline-block align-top" loading="lazy">
     Auburn 
   </a>
 </div>
@@ -40,8 +42,8 @@
 							<div class="panel-body">
 								<ul class="nav navbar-nav">
                   <li><a class="list-group-item list-group-item-action bg-light" href="/admin/plugins.php"><?php echo $lang['All Plugins']; ?></a></li>
-									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit-a-new-notification.php">إرسال إشعار جديد</a></li>
-                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php">عرض كافة الإشعارات المرسلة</a></li>
+									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit-a-new-notification.php"><?php echo $lang['Send New Notification']; ?></a></li>
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php"><?php echo $lang['View All Notifications']; ?></a></li>
                 </ul>
               </div>
             </div>
@@ -52,7 +54,7 @@
 								<ul class="nav navbar-nav">
                   <li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit_posts.php"><?php echo $lang['All posts']; ?></a></li>
 									<li><a class="list-group-item list-group-item-action bg-light" href="/admin/submit_posts.php"><?php echo $lang['Submit posts']; ?></a></li>
-                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php">عرض كافة الإشعارات المرسلة</a></li>
+                  <li><a class="list-group-item list-group-item-action bg-light" href="/admin/view-all-notification.php"><?php echo $lang['View All Notifications']; ?></a></li>
                 </ul>
               </div>
             </div>

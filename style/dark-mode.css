@@ -1,0 +1,19 @@
+body.dark-mode {
+    background-color: #181818 !important;
+    color: #f1f1f1 !important;
+}
+body.dark-mode .card,
+body.dark-mode .navbar,
+body.dark-mode .modal-content {
+    background-color: #232323 !important;
+    color: #f1f1f1 !important;
+}
+body.dark-mode .form-control {
+    background-color: #222 !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+}
+body.dark-mode .btn-primary {
+    background-color: #444 !important;
+    border-color: #666 !important;
+} 

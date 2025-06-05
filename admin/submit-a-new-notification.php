@@ -32,30 +32,30 @@ unset($_SESSION['message']);
 </button>
 </div>
 <?php endif ?>
-		  <h3>مرحباً بك في صفحة إرسال الإشعارات للمستخدمين</h3>
-		<p>الرجاء تعبئة البيانات التالية ومن ثم أنقر على إرسال</p>
+		  <h3><?php echo $lang['Notification Page Welcome']; ?></h3>
+		<p><?php echo $lang['Notification Page Description']; ?></p>
         <form method="post" class="form-inline" action="/admin/process-insert-notifcations.php">
 		<div class="form-row">
 		<div class="form-group col-md-12 mb-2">
-		  <label for="name" class="col-sm-2 col-form-label">إسم المرسل</label>
-		  <input name="name"class="form-control col-sm-3" type="text" placeholder="الإسم" required>
+		  <label for="name" class="col-sm-2 col-form-label"><?php echo $lang['Sender Name']; ?></label>
+		  <input name="name"class="form-control col-sm-3" type="text" placeholder="<?php echo $lang['Name Placeholder']; ?>" required>
 		  </div>
 		  <div class="form-group col-md-12 mb-2">
-		  <label class="col-sm-2 col-form-label" for="message">نص الرسالة</label><br>
-		  <textarea name="message" class="form-control" placeholder="الرسالة" cols="30" rows="1" required></textarea>
+		  <label class="col-sm-2 col-form-label" for="message"><?php echo $lang['Message Text']; ?></label><br>
+		  <textarea name="message" class="form-control" placeholder="<?php echo $lang['Message Placeholder']; ?>" cols="30" rows="1" required></textarea>
           </div>
 		  <div class="form-group col-md mb-2">
-		  <label class="col-sm-2 col-form-label" for="option">نوع الحدث</label>
+		  <label class="col-sm-2 col-form-label" for="option"><?php echo $lang['Event Type']; ?></label>
 		  <select class="form-control col-sm-3" name="option" required>
 			<option value=""></option>
-			<option>إجتماع</option>
-			<option>تحذير</option>
-			<option>تنويه</option>
-			<option>معلومة</option>
+			<option><?php echo $lang['Meeting']; ?></option>
+			<option><?php echo $lang['Warning']; ?></option>
+			<option><?php echo $lang['Notice']; ?></option>
+			<option><?php echo $lang['Information']; ?></option>
 			</select>
 			</div>
 			<div class="form-group col-md">
-			<label class="col-sm-2 col-form-label" for="level">الرتبة</label>
+			<label class="col-sm-2 col-form-label" for="level"><?php echo $lang['Rank']; ?></label>
 			<select class="form-control col-sm-3" name="level" required>
 			<option value=""></option>
 			<option value="user">user</option>
@@ -65,7 +65,7 @@ unset($_SESSION['message']);
 			</div>
 			<div class="form-group col-md-6 mt-2">
 			<label class="col-sm-8 col-form-label"></label>
-			<button name="submit" class="btn btn-outline-success col-sm-2" type="submit">إرسال</button>
+			<button name="submit" class="btn btn-outline-success col-sm-2" type="submit"><?php echo $lang['Send Button']; ?></button>
 			</div>
 			</form>
 			</div>

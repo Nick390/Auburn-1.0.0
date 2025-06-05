@@ -1,16 +1,50 @@
 <?php
 require_once '../includes/source/dp_connect.php';
 
-$result = $conn->query("SELECT * FROM `settings`") or die($conn->error);
-$data = $result->fetch_assoc();
+// Initialize default values
+$data = [
+    'website_title' => 'Auburn CMS',
+    'website_favicon' => '../admin/files/favicon.ico',
+    'website_login_icon' => '../admin/files/logo.svg'
+];
+
+// Try to get settings from database if connection exists
+if (isset($conn) && $conn) {
+    $result = $conn->query("SELECT * FROM `settings`");
+    if ($result && $result->num_rows > 0) {
+        $db_data = $result->fetch_assoc();
+        if ($db_data) {
+            // Update data with database values, adjusting paths for pages directory
+            $data['website_title'] = $db_data['website_title'];
+            
+            // Handle favicon path - add ../ if it doesn't start with / or ../
+            if (isset($db_data['website_favicon'])) {
+                $favicon_path = $db_data['website_favicon'];
+                if (substr($favicon_path, 0, 1) !== '/' && substr($favicon_path, 0, 3) !== '../') {
+                    $favicon_path = '../' . $favicon_path;
+                }
+                $data['website_favicon'] = $favicon_path;
+            }
+            
+            // Handle login icon path - add ../ if it doesn't start with / or ../
+            if (isset($db_data['website_login_icon'])) {
+                $login_icon_path = $db_data['website_login_icon'];
+                if (substr($login_icon_path, 0, 1) !== '/' && substr($login_icon_path, 0, 3) !== '../') {
+                    $login_icon_path = '../' . $login_icon_path;
+                }
+                $data['website_login_icon'] = $login_icon_path;
+            }
+        }
+    }
+}
 ?>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?php echo "{$data['website_title']}"; ?> - نسيت كلمة المرور</title>
+    <title><?php echo htmlspecialchars($data['website_title']); ?> - نسيت كلمة المرور</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="<?php echo "{$data['website_favicon']}"; ?>" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo htmlspecialchars($data['website_favicon']); ?>" />
     <style>
           html,
           body {
@@ -54,7 +88,7 @@ $data = $result->fetch_assoc();
   </head>
   <body class="text-center">
     <form class="form-signin" action="/pages/process_forgot_your_password.php" method="post">
-        <img class="mb-4" src="<?php echo "{$data['website_login_icon']}"; ?>" alt="" width="72" height="72">
+        <img class="mb-4" src="<?php echo htmlspecialchars($data['website_login_icon']); ?>" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">هل نسيت كلمة المرور ؟</h1>
         <p> من فضلك ادخل البريد الإلكتروني الخاص بحسابك و سوف نرسل لك رابط لتغيير كلمة المرور</p>
         <?php 
@@ -67,7 +101,7 @@ $data = $result->fetch_assoc();
             }
           }
           ?>
-        <input type="email" name="user-email" id="inputEmail" class="form-control" placeholder="البريد الالكتروني" required="" autofocus="">
+        <input type="email" name="user-email" id="inputEmail" class="form-control" placeholder="<?php echo $lang['Email Placeholder']; ?>" required="" autofocus="">
         <br>
         <div class="checkbox mb-2">
         <label>إرجع إلي <a href="/">صفحة تسجيل الدخول</a></label>

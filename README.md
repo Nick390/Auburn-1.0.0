@@ -1,62 +1,198 @@
-# Auburn 1.0.0
-It is an open source content management system or CMS.
-#### About the system
----
-##### This system works for:
-* For companies, individuals, or small or large global organizations.
-* The system is completely free, we recommend that you download the stable version.
+# Auburn CMS 1.0.0
 
-##### Multiple libraries were used which is:
-* Bootstrap 4.5.2.
-* JsDelivr & jQuery 3.5.1.
-* CKEditor 4.14.1.
-* Popper 1.16.1.
-* Fontawesome free 5.14.0 web.
+Auburn is an open-source Content Management System (CMS) built with PHP and MySQL. It provides a complete solution for managing content, users, and files with a modern web interface.
 
-##### Minimum requirements for use is:
-1. Server space 5 GB and up.
-2. PHP 7.4.1 and up.
-3. Apache 2.4.41 and up.
-4. MySQL 10.4.11 and up.
-5. This system has been tried on Windows Server only.
+## Features
 
-##### Auburn License:
-Please review the license.md file.
+- **User Management**: Registration, login, and user profiles
+- **Content Management**: Create and manage posts/articles
+- **File Management**: Upload and manage multiple files
+- **Branch Management**: Manage different branches/locations
+- **Notifications System**: Internal notification system
+- **Dashboard**: Administrative dashboard with overview
+- **Multi-language Support**: Arabic and English interface
+- **Responsive Design**: Bootstrap-based responsive UI
 
-##### Other licenses
-Please review the license folder.
+## System Requirements
 
-##### The internal structure of the files
+- **Web Server**: Apache 2.4.41 or higher
+- **PHP**: 7.4.1 or higher
+- **Database**: MySQL 5.7+ or MariaDB 10.4.11+
+- **Storage**: 5 GB minimum server space
+- **Browser**: Modern web browser with JavaScript enabled
 
-<div align="center">
-       <a href="https://lh4.googleusercontent.com/qjNAq6CL1O0ycfzHOGL-46CEj_0PX2J11HGJQb2PrTMp0Lf4WAsW5W5fM_JzQnkaBdA4XeeLzBnklkYYLHDM=w1366-h661">
-        <img
-            alt="PHP"
-            src="https://lh4.googleusercontent.com/qjNAq6CL1O0ycfzHOGL-46CEj_0PX2J11HGJQb2PrTMp0Lf4WAsW5W5fM_JzQnkaBdA4XeeLzBnklkYYLHDM=w1366-h661"
-            >
-        </a>
-</div>
+## Libraries Used
 
----
-#### How to use?
----
-##### How to use with XAMPP servers?
-* Provide the minimum requirements.
-* Create Database: `mydb` or Create your own database and add it in the following files `includes/source/db.php` & `includes/source/dp_connect.php` & `includes/source/function.php`.
-* Clone or download.
-``` 
-https://github.com/Nick390/Auburn-1.0.0.git
+- Bootstrap 4.5.2
+- jQuery 3.5.1
+- CKEditor 4.14.1
+- Popper.js 1.16.1
+- Font Awesome 5.14.0
 
-git@github.com:Nick390/Auburn-1.0.0.git
+## Installation Guide
+
+### Step 1: Download and Extract
+
+1. Clone or download the repository:
+   ```bash
+   git clone https://github.com/Nick390/Auburn-1.0.0.git
+   ```
+   Or download the ZIP file and extract it.
+
+2. Place the `Auburn-1.0.0` folder in your web server directory:
+   - **XAMPP**: `C:\xampp\htdocs\Auburn-1.0.0`
+   - **WAMP**: `C:\wamp64\www\Auburn-1.0.0`
+   - **Linux**: `/var/www/html/Auburn-1.0.0`
+
+### Step 2: Start Your Web Server
+
+1. Start Apache and MySQL services
+2. Ensure MySQL is running on port 3306 (default)
+
+### Step 3: Database Installation
+
+1. Open your web browser and navigate to:
+   ```
+   http://localhost/Auburn-1.0.0/install.php
+   ```
+
+2. Click the "Install Auburn CMS" button to:
+   - Create the `auburn_cms` database
+   - Create all required tables
+   - Set up the database structure
+
+### Step 4: Configure Database Connection (If Needed)
+
+If you're using different MySQL credentials, update these files:
+
+1. **includes/source/db.php**
+2. **includes/source/dp_connect.php**  
+3. **includes/source/function.php**
+
+Change the following values:
+```php
+// Update these if different from defaults
+$DB_USER = 'root';           // Your MySQL username
+$DB_PASSWORD = '';           // Your MySQL password
+$DB_NAME = 'auburn_cms';     // Database name (keep as is)
+$DB_HOST = 'localhost';      // Database host (usually localhost)
 ```
-* Extract the files to main directory.
-* Delete zip file if it's there. 
-* Go to File `config/tables.config.php` and execute all tables manually.
-* Navigate to `includes/source/db.php` & `includes/source/dp_connect.php` & `includes/source/function.php` change the username and the password to what did you put in mysql and save the file.
-* Now go to the mean page in the login form create an account then login using that account.
-* You are ready to use the system.
+
+### Step 5: Access the Application
+
+1. Navigate to: `http://localhost/Auburn-1.0.0/`
+2. You'll see the login page
+3. Click "Register" to create your first user account
+4. After registration, log in with your credentials
+5. You'll be redirected to the dashboard
+
+## Project Structure
+
+```
+Auburn-1.0.0/
+├── admin/              # Administrative functions
+├── ckeditor/           # Rich text editor
+├── config/             # Configuration files
+│   └── tables.config.php
+├── includes/           # Core includes
+│   ├── lang/          # Language files
+│   ├── libraries/     # External libraries
+│   ├── php/           # PHP includes
+│   └── source/        # Database connections
+├── licenses/           # License files
+├── pages/             # Application pages
+├── scripts/           # JavaScript files
+├── style/             # CSS stylesheets
+├── index.php          # Main entry point
+├── install.php        # Database installer
+└── README.md          # This file
+```
+
+## Database Tables
+
+The system creates the following tables:
+
+- **users**: User accounts and profiles
+- **posts**: Blog posts and articles
+- **notifications**: System notifications
+- **settings**: Website configuration
+- **uploadmultiplefiles**: File upload records
+- **downloadhistory**: Download tracking
+- **add_a_new_branch**: Branch management
+
+## Usage
+
+### Creating Content
+1. Log in to the dashboard
+2. Navigate to the posts section
+3. Create new articles using the CKEditor
+4. Manage tags and categories
+
+### User Management
+1. Register new users through the registration page
+2. Manage user profiles and permissions
+3. View user activity and history
+
+### File Management
+1. Upload files through the file management interface
+2. Track download history
+3. Organize files by categories
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Database Connection Error**
+   - Check MySQL service is running
+   - Verify database credentials in config files
+   - Ensure `auburn_cms` database exists
+
+2. **Permission Errors**
+   - Check file permissions on web server
+   - Ensure PHP has write access to upload directories
+
+3. **Login Issues**
+   - Clear browser cache and cookies
+   - Check if user account exists in database
+   - Verify password hashing is working
+
+4. **Missing Dependencies**
+   - Ensure all required PHP extensions are installed
+   - Check PHP version compatibility
+
+### Getting Help
+
+1. Check the error logs in your web server
+2. Enable PHP error reporting for debugging
+3. Verify all file paths are correct
+4. Check database table structure matches requirements
+
+## Security Notes
+
+- Change default database passwords
+- Use strong passwords for user accounts
+- Keep PHP and MySQL updated
+- Configure proper file permissions
+- Use HTTPS in production environments
+
+## License
+
+Please review the `license.md` file for licensing information.
+
+## Credits
+
+**Developer**: Alwaleed Alwabel  
+**Version**: 1.0.0  
+**Year**: 2019-2024
+
+## Support
+
+For issues and questions:
+1. Check this README first
+2. Review the troubleshooting section
+3. Check the project's issue tracker
+4. Ensure you're using supported PHP/MySQL versions
+
 ---
 
-###### Good Luck
-
-###### The system was built by Alwaleed Alwabel.
+**Note**: This system has been tested primarily on Windows Server with XAMPP. For other environments, you may need to adjust file paths and permissions accordingly.
